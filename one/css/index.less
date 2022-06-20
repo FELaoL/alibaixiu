@@ -16,49 +16,68 @@ body {
 			background-color: #fff;
 			margin: 0;
 
+			// 左侧
 			.col-xl-2 {
 				padding: 0;
 				width: 190px;
 				max-width: 190px;
 				background-color: #f6f6f6;
-
+				// 左侧logo
 				img {
 					width: 100%;
 					height: 120px;
 					background-color: #ff5e52;
 				}
 
-				ul {
-					width: 100%;
-					list-style: none;
+				// 修改默认的nav-item样式
+				.felaol-nav-item {
+					height: 44px;
+					line-height: 44px;
 
-					li {
-						width: 100%;
-						height: 44px;
-						line-height: 44px;
+					.felaole-nav-link {
+						padding: 0;
+						padding-left: 25px;
+						font-size: 15px;
+						color: #666;
+						background-color: #f6f6f6;
 
-						a {
-							background-color: #f6f6f6;
-							color: #666;
-							font-size: 15px;
-							padding-left: 25px;
-							width: 100%;
-							display: block;
-
-							&:hover {
-								background-color: #fff;
-								color: #444;
-							}
+						&:hover {
+							background-color: #fff;
+							color: #444;
 						}
 					}
 				}
 
-				.search {
-					background-color: #f9f9f9;
-					height: 90px;
-					width: 100%;
+				// 修改默认的导航条样式
+				.felaol-navbar {
 					border-top: 1px solid #eee;
 					border-bottom: 1px solid #eee;
+					padding: 15px 0 31px 15px;
+
+					.felaol-form-inline {
+						padding-top: 10px;
+						.felaol-form-control {
+							width: 112px;
+							height: 34px;
+							padding: 5px 5px 5px 10px;
+							background-color: #fff;
+							font-size: 14px;
+							border-radius: 0;
+							margin-right: 0;
+							outline: none;
+						}
+
+						.felaol-btn {
+							width: 48px;
+							height: 34px;
+							padding: 6px;
+							border-radius: 0;
+							background-color: #ff5e52;
+							font-size: 14px;
+							color: #fff;
+							border: none;
+						}
+					}
 				}
 			}
 

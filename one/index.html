@@ -17,22 +17,23 @@
 					<div>
 						<img src="./images/logo.png" alt="" />
 					</div>
-					<!-- 菜单 -->
-					<ul>
-						<li><a href="javascript:;">📡 新闻</a></li>
-						<li><a href="javascript:;">📽 生活</a></li>
-						<li><a href="javascript:;">🌴 自然</a></li>
-						<li><a href="javascript:;">⌚️ 科技</a></li>
-						<li><a href="javascript:;">🎁 奇趣</a></li>
-						<li><a href="javascript:;">🍔 美食</a></li>
+					<!-- 菜单 Bootstrap组件导航navs-->
+					<ul class="nav flex-column">
+						<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaole-nav-link">📡 新闻</a></li>
+						<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaole-nav-link">📽 生活</a></li>
+						<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaole-nav-link">🌴 自然</a></li>
+						<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaole-nav-link">⌚️ 科技</a></li>
+						<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaole-nav-link">🎁 奇趣</a></li>
+						<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaole-nav-link">🍔 美食</a></li>
 					</ul>
-					<!-- 输入搜索框 -->
-					<div class="search">
-						<form action="javascript:;">
-							<input type="text" placeholder="输入关键字" />
-							<input type="button" value="搜索" />
+					<!-- 输入搜索框-->
+					<nav class="navbar navbar-light bg-light felaol-navbar">
+						<form class="form-inline felaol-form-inline">
+							<!--  mr-sm-2 这个有一个右margin -->
+							<input class="form-control felaol-form-control" type="search" placeholder="输入关键字" aria-label="Search" />
+							<button class="btn btn-outline-success my-2 my-sm-0 felaol-btn" type="submit">搜索</button>
 						</form>
-					</div>
+					</nav>
 				</div>
 				<div class="col-xl-7">4444</div>
 				<div class="col-xl-3">5555</div>

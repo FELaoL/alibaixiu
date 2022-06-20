@@ -25,33 +25,48 @@ body .container-fluid .row .col-xl-2 img {
   height: 120px;
   background-color: #ff5e52;
 }
-body .container-fluid .row .col-xl-2 ul {
-  width: 100%;
-  list-style: none;
-}
-body .container-fluid .row .col-xl-2 ul li {
-  width: 100%;
+body .container-fluid .row .col-xl-2 .felaol-nav-item {
   height: 44px;
   line-height: 44px;
 }
-body .container-fluid .row .col-xl-2 ul li a {
-  background-color: #f6f6f6;
-  color: #666;
-  font-size: 15px;
+body .container-fluid .row .col-xl-2 .felaol-nav-item .felaole-nav-link {
+  padding: 0;
   padding-left: 25px;
-  width: 100%;
-  display: block;
+  font-size: 15px;
+  color: #666;
+  background-color: #f6f6f6;
 }
-body .container-fluid .row .col-xl-2 ul li a:hover {
+body .container-fluid .row .col-xl-2 .felaol-nav-item .felaole-nav-link:hover {
   background-color: #fff;
   color: #444;
 }
-body .container-fluid .row .col-xl-2 .search {
-  background-color: #f9f9f9;
-  height: 90px;
-  width: 100%;
+body .container-fluid .row .col-xl-2 .felaol-navbar {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  padding: 15px 0 31px 15px;
+}
+body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline {
+  padding-top: 10px;
+}
+body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-form-control {
+  width: 112px;
+  height: 34px;
+  padding: 5px 5px 5px 10px;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 0;
+  margin-right: 0;
+  outline: none;
+}
+body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-btn {
+  width: 48px;
+  height: 34px;
+  padding: 6px;
+  border-radius: 0;
+  background-color: #ff5e52;
+  font-size: 14px;
+  color: #fff;
+  border: none;
 }
 body .container-fluid .row .col-xl-7 {
   padding: 0;
