@@ -73,6 +73,16 @@ body .container-fluid .row .col-xl-7 {
   max-width: 790px;
   flex: 1;
 }
+body .container-fluid .row .col-xl-7 .col-6 {
+  width: 360px;
+  height: 266px;
+  padding: 0;
+}
+body .container-fluid .row .col-xl-7 .col {
+  padding: 0;
+  width: 360px;
+  height: 266px;
+}
 body .container-fluid .row .col-xl-3 {
   width: 320px;
   max-width: 320px;
