@@ -4,7 +4,6 @@
   }
 }
 body {
-  height: 1920px;
   background-color: #eee;
 }
 body .container-fluid {
@@ -70,15 +69,16 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
   border: none;
 }
 body .container-fluid .row .col-xl-7 {
-  padding: 0;
+  padding: 20px 25px 0;
   max-width: 790px;
   flex: 1;
 }
 body .container-fluid .row .col-xl-3 {
-  width: 300px;
-  max-width: 300px;
+  width: 320px;
+  max-width: 320px;
   padding: 0;
   padding-top: 20px;
+  padding-right: 20px;
 }
 body .container-fluid .row .col-xl-3 img {
   width: 100%;
@@ -122,4 +122,34 @@ body .container-fluid .row .col-xl-3 .felaol-nav-link-active {
   line-height: 34px;
   border: none;
   border-bottom: 2px solid #ff5e52;
+}
+body .container-fluid .row .col-xl-3 .list-group-item-action {
+  height: 78px;
+  padding: 8px 0 8px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+body .container-fluid .row .col-xl-3 .list-group-item-action > div {
+  width: 210px;
+}
+body .container-fluid .row .col-xl-3 .list-group-item-action > div h5 {
+  width: 210px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444;
+  margin: 0;
+  margin-top: 1px;
+}
+body .container-fluid .row .col-xl-3 .list-group-item-action > div p {
+  width: 210px;
+  font-size: 12px;
+  color: #999;
+  line-height: 16px;
+  margin: 0;
+}
+body .container-fluid .row .col-xl-3 .list-group-item-action img {
+  margin: 0;
+  width: 80px;
+  height: 60px;
+  margin-left: 10px;
 }
