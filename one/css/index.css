@@ -4,6 +4,7 @@
   }
 }
 body {
+  height: 1920px;
   background-color: #eee;
 }
 body .container-fluid {
@@ -29,14 +30,14 @@ body .container-fluid .row .col-xl-2 .felaol-nav-item {
   height: 44px;
   line-height: 44px;
 }
-body .container-fluid .row .col-xl-2 .felaol-nav-item .felaole-nav-link {
+body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link {
   padding: 0;
   padding-left: 25px;
   font-size: 15px;
   color: #666;
   background-color: #f6f6f6;
 }
-body .container-fluid .row .col-xl-2 .felaol-nav-item .felaole-nav-link:hover {
+body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link:hover {
   background-color: #fff;
   color: #444;
 }
@@ -70,11 +71,55 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
 }
 body .container-fluid .row .col-xl-7 {
   padding: 0;
+  max-width: 790px;
   flex: 1;
-  max-width: 770px;
 }
 body .container-fluid .row .col-xl-3 {
-  width: 320px;
-  max-width: 320px;
+  width: 300px;
+  max-width: 300px;
   padding: 0;
+  padding-top: 20px;
+}
+body .container-fluid .row .col-xl-3 img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+body .container-fluid .row .col-xl-3 .felaol-card {
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+body .container-fluid .row .col-xl-3 .felaol-card .felaol-card-body {
+  padding: 0 15px 15px;
+}
+body .container-fluid .row .col-xl-3 .felaol-card .felaol-card-body .felaol-badge {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff5e52;
+  border-radius: 0;
+  padding: 0 15px;
+  margin-top: -1px;
+  font-weight: 400;
+}
+body .container-fluid .row .col-xl-3 .felaol-card .felaol-card-body .felaol-title {
+  margin: 20px 0 10px;
+  color: #ff5e52;
+  height: 22px;
+  line-height: 22px;
+}
+body .container-fluid .row .col-xl-3 .felaol-card .felaol-card-body .felaol-text {
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+}
+body .container-fluid .row .col-xl-3 .felaol-card:hover {
+  border-color: #ff5e52;
+}
+body .container-fluid .row .col-xl-3 .felaol-nav-link-active {
+  padding: 0;
+  font-size: 20px;
+  line-height: 34px;
+  border: none;
+  border-bottom: 2px solid #ff5e52;
 }

@@ -5,6 +5,7 @@
 }
 
 body {
+	height: 1920px;
 	background-color: #eee;
 
 	// 修改默认的内边距和外边距
@@ -34,7 +35,7 @@ body {
 					height: 44px;
 					line-height: 44px;
 
-					.felaole-nav-link {
+					.felaol-nav-link {
 						padding: 0;
 						padding-left: 25px;
 						font-size: 15px;
@@ -83,14 +84,65 @@ body {
 
 			.col-xl-7 {
 				padding: 0;
+				max-width: 790px;
 				flex: 1;
-				max-width: 770px;
 			}
 
 			.col-xl-3 {
-				width: 320px;
-				max-width: 320px;
+				width: 300px;
+				max-width: 300px;
 				padding: 0;
+				padding-top: 20px;
+
+				img {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+
+				.felaol-card {
+					border-radius: 0;
+					margin-bottom: 20px;
+					.felaol-card-body {
+						padding: 0 15px 15px;
+
+						.felaol-badge {
+							height: 28px;
+							line-height: 28px;
+							font-size: 14px;
+							color: #fff;
+							background-color: #ff5e52;
+							border-radius: 0;
+							padding: 0 15px;
+							margin-top: -1px;
+							font-weight: 400;
+						}
+
+						.felaol-title {
+							margin: 20px 0 10px;
+							color: #ff5e52;
+							height: 22px;
+							line-height: 22px;
+						}
+
+						.felaol-text {
+							font-size: 12px;
+							color: #999;
+							line-height: 20px;
+						}
+					}
+
+					&:hover {
+						border-color: #ff5e52;
+					}
+				}
+
+				.felaol-nav-link-active {
+					padding: 0;
+					font-size: 20px;
+					line-height: 34px;
+					border: none;
+					border-bottom: 2px solid #ff5e52;
+				}
 			}
 		}
 	}
