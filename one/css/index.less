@@ -86,16 +86,119 @@ body {
 				max-width: 790px;
 				flex: 1;
 
-				.col-6 {
-					width: 360px;
-					height: 266px;
+				.row {
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					.col-6 {
+						width: 360px;
+						height: 266px;
+						padding: 0;
+
+						.carousel {
+							margin-bottom: 10px;
+							.carousel-caption {
+								height: 41px;
+								bottom: 0;
+								left: 0;
+								padding: 4px 10px 0;
+								background-color: rgba(0, 0, 0, 0.7);
+								text-align: left;
+
+								&:hover {
+									background-color: #ff5e52;
+								}
+
+								h5 {
+									line-height: 34px;
+									margin: 0;
+									font-size: 16px;
+								}
+							}
+						}
+					}
+
+					.col {
+						padding: 0;
+						width: 360px;
+						height: 266px;
+
+						.felaol-carousel {
+							width: calc(50% - 10px) !important;
+							height: calc(50% - 5px) !important;
+							margin-left: 10px;
+							margin-bottom: 10px;
+
+							.carousel-caption {
+								height: 41px;
+								bottom: 0;
+								left: 0;
+								padding: 4px 10px 0;
+								background-color: rgba(0, 0, 0, 0.7);
+								text-align: left;
+
+								&:hover {
+									background-color: #ff5e52;
+								}
+
+								h5 {
+									line-height: 17px;
+									margin: 0;
+									font-size: 12px;
+								}
+							}
+						}
+					}
+				}
+				// tabs
+				.felaol-nav-tabs a {
 					padding: 0;
+					font-size: 20px;
+					line-height: 34px;
+					border: none;
+					border-bottom: 2px solid #ff5e52;
 				}
 
-				.col {
-					padding: 0;
-					width: 360px;
-					height: 266px;
+				.felaol-tab-content {
+					width: 720px;
+					overflow: hidden;
+					.one {
+						padding-top: 20px;
+						margin-bottom: 20px;
+						line-height: 20px;
+						font-size: 14px;
+						color: #444;
+					}
+					.two {
+						width: 730px;
+						padding-top: 15px;
+						margin-bottom: 10px;
+
+						li {
+							width: calc(25% - 10px) !important;
+							margin-right: 10px;
+							border: none;
+							padding: 0;
+
+							&:last-child {
+								margin-right: 10px;
+							}
+
+							img {
+								width: 132px;
+								margin-bottom: 5px;
+							}
+
+							& > div {
+								color: #666;
+								line-height: 20px;
+								font-size: 14px;
+							}
+
+							&:hover div {
+								color: #ff5e52;
+							}
+						}
+					}
 				}
 			}
 
@@ -181,6 +284,10 @@ body {
 							line-height: 16px;
 							margin: 0;
 						}
+					}
+
+					&:hover div h5 {
+						color: #ff5e52;
 					}
 
 					img {
