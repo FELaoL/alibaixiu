@@ -5,6 +5,7 @@
 }
 
 body {
+	height: 1920px;
 	background-color: #eee;
 
 	// 修改默认的内边距和外边距
@@ -214,9 +215,14 @@ body {
 
 					.three {
 						.list-group-item {
+							border: none;
+							border-bottom: 1px solid #eee;
 							padding: 25px 0;
 							.line-one {
-								a {
+								height: 25px;
+								margin-bottom: 10px;
+								overflow: hidden;
+								> a {
 									position: relative;
 									font-size: 12px;
 									color: #fff;
@@ -224,6 +230,7 @@ body {
 									padding: 5px 7px;
 									line-height: 14px;
 									margin-right: 5px;
+									width: 38px;
 
 									.arrow-right {
 										border-top: 4px solid transparent;
@@ -234,11 +241,54 @@ body {
 										top: 7px;
 									}
 								}
-								h5 {
+								> h5 {
 									font-size: 22px;
 									color: #444;
 									line-height: 25px;
 									margin: 0;
+								}
+								> i {
+									font-style: normal;
+									font-size: 12px;
+									line-height: 34px;
+									color: #999;
+									margin-left: 10px;
+								}
+							}
+
+							.line-two {
+								font-size: 12px;
+								line-height: 20px;
+								color: #999;
+							}
+
+							.line-three {
+								img {
+									width: 175.5px;
+									height: 132px;
+									margin-right: 6px;
+								}
+
+								> div {
+									margin-top: 6px;
+									margin-bottom: 10px;
+									padding-left: 15px;
+									div {
+										margin-top: 10px;
+										font-size: 14px;
+										line-height: 22px;
+										color: #777;
+
+										&:nth-child(2) {
+											font-size: 12px;
+											color: #999;
+											line-height: 16px;
+											i {
+												margin-left: 20px;
+												font-style: normal;
+											}
+										}
+									}
 								}
 							}
 						}
