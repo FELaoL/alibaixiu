@@ -4,7 +4,6 @@
   }
 }
 body {
-  height: 1920px;
   background-color: #eee;
 }
 body .container-fluid {
@@ -181,75 +180,80 @@ body .container-fluid .row .col-xl-7 .felaol-tab-content .two li:hover div {
   color: #ff5e52;
 }
 body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item {
+  padding: 25px 0;
   border: none;
   border-bottom: 1px solid #eee;
-  padding: 25px 0;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-one {
-  height: 25px;
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 {
   margin-bottom: 10px;
-  overflow: hidden;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-one > a {
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .tag {
   position: relative;
   font-size: 12px;
+  line-height: 24px;
+  background-color: #ff5e52;
   color: #fff;
-  background-color: #ff5e5c;
-  padding: 5px 7px;
-  line-height: 14px;
-  margin-right: 5px;
-  width: 38px;
+  padding: 0 7px;
+  margin-right: 9px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-one > a .arrow-right {
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 4px solid #ff5e5c;
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .tag::after {
+  content: "";
   position: absolute;
   right: -4px;
-  top: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-one > h5 {
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .title {
   font-size: 22px;
   color: #444;
   line-height: 25px;
-  margin: 0;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-one > i {
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .title:hover {
+  color: #ff5e52;
+}
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .bi {
+  line-height: 25px;
+  margin-left: 10px;
   font-style: normal;
   font-size: 12px;
-  line-height: 34px;
   color: #999;
-  margin-left: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-two {
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line2 {
   font-size: 12px;
-  line-height: 20px;
   color: #999;
+  line-height: 20px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-three img {
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 {
+  margin-top: 10px;
+}
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .left img {
   width: 175.5px;
   height: 132px;
-  margin-right: 6px;
+  margin-bottom: 6px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-three > div {
-  margin-top: 6px;
-  margin-bottom: 10px;
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right {
   padding-left: 15px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-three > div div {
-  margin-top: 10px;
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right .a_body {
   font-size: 14px;
   line-height: 22px;
   color: #777;
+  margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-three > div div:nth-child(2) {
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right .a_footer {
   font-size: 12px;
+  line-height: 15px;
   color: #999;
-  line-height: 16px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line-three > div div:nth-child(2) i {
-  margin-left: 20px;
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right .a_footer i {
   font-style: normal;
+  margin-left: 20px;
+}
+body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right_4 {
+  padding-left: 0;
 }
 body .container-fluid .row .col-xl-3 {
   width: 320px;
