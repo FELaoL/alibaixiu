@@ -2,6 +2,59 @@
   .container-fluid {
     width: 1280px;
   }
+  .col-xl-7 {
+    max-width: 790px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .d-xl-block {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 879px) {
+  .col-xl-2 {
+    width: 190px;
+    max-width: 190px;
+  }
+  .col-xl-2 .felaol-nav-item {
+    height: 44px;
+    line-height: 44px;
+  }
+  .col-xl-2 .felaol-nav-item .felaol-nav-link {
+    padding: 0;
+    padding-left: 25px;
+  }
+  .col-xl-2 .felaol-navbar {
+    padding: 15px 0 31px 15px;
+  }
+  .col-xl-2 .felaol-navbar .felaol-form-control {
+    width: 112px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .d-md-block {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 879px) {
+  .col-xl-2 {
+    width: 160px;
+    max-width: 160px;
+  }
+  .col-xl-2 .felaol-nav-item {
+    height: 40px;
+    line-height: 40px;
+  }
+  .col-xl-2 .felaol-nav-item .felaol-nav-link {
+    padding: 0;
+    padding-left: 15px;
+  }
+  .col-xl-2 .felaol-navbar {
+    padding: 15px 0 31px 5px;
+  }
+  .col-xl-2 .felaol-navbar .felaol-form-control {
+    width: 102px;
+  }
 }
 body {
   background-color: #eee;
@@ -16,22 +69,14 @@ body .container-fluid .row {
 }
 body .container-fluid .row .col-xl-2 {
   padding: 0;
-  width: 190px;
-  max-width: 190px;
   background-color: #f6f6f6;
 }
 body .container-fluid .row .col-xl-2 img {
   width: 100%;
-  height: 120px;
+  max-height: 120px;
   background-color: #ff5e52;
 }
-body .container-fluid .row .col-xl-2 .felaol-nav-item {
-  height: 44px;
-  line-height: 44px;
-}
 body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link {
-  padding: 0;
-  padding-left: 25px;
   font-size: 15px;
   color: #666;
   background-color: #f6f6f6;
@@ -43,13 +88,11 @@ body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link:hover {
 body .container-fluid .row .col-xl-2 .felaol-navbar {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  padding: 15px 0 31px 15px;
 }
 body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline {
   padding-top: 10px;
 }
 body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-form-control {
-  width: 112px;
   height: 34px;
   padding: 5px 5px 5px 10px;
   background-color: #fff;
@@ -70,15 +113,14 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
 }
 body .container-fluid .row .col-xl-7 {
   padding: 20px 25px 0;
-  max-width: 790px;
   flex: 1;
+  background-color: red;
 }
 body .container-fluid .row .col-xl-7 .row {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 body .container-fluid .row .col-xl-7 .row .col-6 {
-  width: 360px;
   height: 266px;
   padding: 0;
 }
