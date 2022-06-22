@@ -255,6 +255,15 @@ body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item
 body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right_4 {
   padding-left: 0;
 }
+body .container-fluid .row .col-xl-7 .footer {
+  padding: 20px 0 30px;
+  font-size: 12px;
+  color: #aaa;
+  line-height: 15px;
+}
+body .container-fluid .row .col-xl-7 .footer div:nth-child(1) {
+  margin-bottom: 20px;
+}
 body .container-fluid .row .col-xl-3 {
   width: 320px;
   max-width: 320px;
