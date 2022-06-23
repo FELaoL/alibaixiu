@@ -2,134 +2,16 @@
   .container-fluid {
     width: 1280px;
   }
-  .col-xl-7 {
-    max-width: 790px;
-  }
 }
 @media screen and (min-width: 1024px) {
-  .d-xl-block {
-    display: block !important;
-  }
 }
 @media screen and (min-width: 879px) {
-  .col-xl-2 {
-    width: 190px;
-    max-width: 190px;
-  }
-  .col-xl-2 .felaol-nav-item {
-    height: 44px;
-    line-height: 44px;
-  }
-  .col-xl-2 .felaol-nav-item .felaol-nav-link {
-    padding: 0;
-    padding-left: 25px;
-  }
-  .col-xl-2 .felaol-navbar {
-    padding: 15px 0 31px 15px;
-  }
-  .col-xl-2 .felaol-navbar .felaol-form-control {
-    width: 112px;
-  }
 }
 @media screen and (min-width: 720px) {
-  .col-xl-7 {
-    padding: 20px 25px 0;
-  }
-  .d-md-block {
-    display: block !important;
-  }
-  .d-sm-block {
-    display: none !important;
-  }
 }
 @media screen and (max-width: 879px) {
-  .col-xl-2 {
-    width: 160px;
-    max-width: 160px;
-  }
-  .col-xl-2 .felaol-nav-item {
-    height: 40px;
-    line-height: 40px;
-  }
-  .col-xl-2 .felaol-nav-item .felaol-nav-link {
-    padding: 0;
-    padding-left: 15px;
-  }
-  .col-xl-2 .felaol-navbar {
-    padding: 15px 0 31px 5px;
-  }
-  .col-xl-2 .felaol-navbar .felaol-form-control {
-    width: 102px;
-  }
 }
 @media screen and (max-width: 720px) {
-  .d-sm-block {
-    display: block !important;
-  }
-  .col-xl-7 {
-    padding: 0;
-    background-color: #fff;
-  }
-  .col-xl-7 .head-sm-menu .navbar-one {
-    padding: 0;
-    background-color: #ff5e52;
-  }
-  .col-xl-7 .head-sm-menu .navbar-one img {
-    height: 42px;
-    margin: 0 auto;
-  }
-  .col-xl-7 .head-sm-menu .navbar-one .navbar-toggler {
-    height: 42px;
-    padding: 0 20px;
-  }
-  .col-xl-7 .head-sm-menu .navbar-one .navbar-toggler span {
-    color: #fff;
-  }
-  .col-xl-7 .head-sm-menu .navbar-collapse-one form {
-    margin: 10px 20.375px;
-  }
-  .col-xl-7 .head-sm-menu .navbar-collapse-one form input {
-    flex: 1;
-    height: 34px;
-    padding: 5px 5px 5px 10px;
-    background-color: #fff;
-    font-size: 14px;
-    border-radius: 0;
-    margin-right: 0;
-    outline: none;
-  }
-  .col-xl-7 .head-sm-menu .navbar-collapse-one form button {
-    width: 48px;
-    height: 34px;
-    padding: 6px;
-    border-radius: 0;
-    background-color: #ff5e52;
-    font-size: 14px;
-    color: #fff;
-    border: none;
-  }
-  .col-xl-7 .head-sm-menu .navbar-two,
-  .col-xl-7 .head-sm-menu .navbar-collapse-two {
-    background-color: #fff;
-    padding: 0;
-    padding-left: 10px;
-  }
-  .col-xl-7 .head-sm-menu .navbar-two a,
-  .col-xl-7 .head-sm-menu .navbar-collapse-two a {
-    font-size: 14px;
-    color: #444;
-    line-height: 42px;
-    padding: 0 10px;
-  }
-  .col-xl-7 .head-sm-menu .navbar-two .navbar-toggler,
-  .col-xl-7 .head-sm-menu .navbar-collapse-two .navbar-toggler {
-    border: none;
-  }
-  .col-xl-7 .head-sm-menu .navbar-collapse-two {
-    z-index: 9999;
-    margin-top: -42px;
-    height: calc(100vh - 42px);
-  }
 }
 body {
   background-color: #eee;
@@ -144,14 +26,22 @@ body .container-fluid .row {
 }
 body .container-fluid .row .col-xl-2 {
   padding: 0;
+  width: 190px;
+  max-width: 190px;
   background-color: #f6f6f6;
 }
 body .container-fluid .row .col-xl-2 img {
   width: 100%;
-  max-height: 120px;
+  height: 120px;
   background-color: #ff5e52;
 }
+body .container-fluid .row .col-xl-2 .felaol-nav-item {
+  height: 44px;
+  line-height: 44px;
+}
 body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link {
+  padding: 0;
+  padding-left: 25px;
   font-size: 15px;
   color: #666;
   background-color: #f6f6f6;
@@ -163,11 +53,13 @@ body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link:hover {
 body .container-fluid .row .col-xl-2 .felaol-navbar {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  padding: 15px 0 31px 15px;
 }
 body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline {
   padding-top: 10px;
 }
 body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-form-control {
+  width: 112px;
   height: 34px;
   padding: 5px 5px 5px 10px;
   background-color: #fff;
@@ -187,13 +79,16 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
   border: none;
 }
 body .container-fluid .row .col-xl-7 {
+  padding: 20px 25px 0;
   flex: 1;
+  max-width: 790px;
 }
 body .container-fluid .row .col-xl-7 .row {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 body .container-fluid .row .col-xl-7 .row .col-6 {
+  width: 360px;
   height: 266px;
   padding: 0;
 }
@@ -257,6 +152,7 @@ body .container-fluid .row .col-xl-7 .felaol-nav-tabs li:nth-child(2) a {
   border-bottom: none;
 }
 body .container-fluid .row .col-xl-7 .felaol-tab-content {
+  width: 720px;
   overflow: hidden;
 }
 body .container-fluid .row .col-xl-7 .felaol-tab-content .one {
