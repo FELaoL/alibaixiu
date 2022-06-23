@@ -1,5 +1,6 @@
 // ①、左侧布局宽度变化大于879 190否则160
 // ②、右侧布局宽度从190变化到160后，tab栏行高从44变化成40
+// ③、右侧布局宽度从190变化到160后，tab左内边距的变化从25变化到15
 
 @media screen and (min-width: 1280px) {
 	.container-fluid {
@@ -27,11 +28,13 @@
 			line-height: 44px;
 			// ② end
 
-			// 		.felaol-nav-link {
-			// 			padding: 0;
-			// 			padding-left: 25px;
-			// 		}
-			// 	}
+			.felaol-nav-link {
+				// ③ start
+				padding: 0;
+				padding-left: 25px;
+				// ③ end
+			}
+			// }
 			// 	.felaol-navbar {
 			// 		padding: 15px 0 31px 15px;
 			// 		.felaol-form-control {
@@ -64,10 +67,12 @@
 			line-height: 40px;
 			// ② end
 
-			// 		.felaol-nav-link {
-			// 			padding: 0;
-			// 			padding-left: 15px;
-			// 		}
+			.felaol-nav-link {
+				// ③ start
+				padding: 0;
+				padding-left: 15px;
+				// ③ end
+			}
 			// 	}
 			// 	.felaol-navbar {
 			// 		padding: 15px 0 31px 5px;
@@ -192,8 +197,10 @@ body {
 					// ② end
 
 					.felaol-nav-link {
-						padding: 0;
-						padding-left: 25px;
+						// ③ start
+						// padding: 0;
+						// padding-left: 25px;
+						// ③ end
 						font-size: 15px;
 						color: #666;
 						background-color: #f6f6f6;
