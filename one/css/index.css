@@ -32,6 +32,9 @@
   }
 }
 @media screen and (min-width: 720px) {
+  .col-xl-7 {
+    padding: 20px 25px 0;
+  }
   .d-md-block {
     display: block !important;
   }
@@ -54,6 +57,11 @@
   }
   .col-xl-2 .felaol-navbar .felaol-form-control {
     width: 102px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .col-xl-7 {
+    padding: 0;
   }
 }
 body {
@@ -112,9 +120,7 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
   border: none;
 }
 body .container-fluid .row .col-xl-7 {
-  padding: 20px 25px 0;
   flex: 1;
-  background-color: red;
 }
 body .container-fluid .row .col-xl-7 .row {
   padding-bottom: 10px;
