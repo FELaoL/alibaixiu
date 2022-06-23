@@ -38,6 +38,9 @@
   .d-md-block {
     display: block !important;
   }
+  .d-sm-block {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 879px) {
   .col-xl-2 {
@@ -60,8 +63,72 @@
   }
 }
 @media screen and (max-width: 720px) {
+  .d-sm-block {
+    display: block !important;
+  }
   .col-xl-7 {
     padding: 0;
+    background-color: #fff;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one {
+    padding: 0;
+    background-color: #ff5e52;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one img {
+    height: 42px;
+    margin: 0 auto;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one .navbar-toggler {
+    height: 42px;
+    padding: 0 20px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one .navbar-toggler span {
+    color: #fff;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-one form {
+    margin: 10px 20.375px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-one form input {
+    flex: 1;
+    height: 34px;
+    padding: 5px 5px 5px 10px;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    margin-right: 0;
+    outline: none;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-one form button {
+    width: 48px;
+    height: 34px;
+    padding: 6px;
+    border-radius: 0;
+    background-color: #ff5e52;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+  }
+  .col-xl-7 .head-sm-menu .navbar-two,
+  .col-xl-7 .head-sm-menu .navbar-collapse-two {
+    background-color: #fff;
+    padding: 0;
+    padding-left: 10px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-two a,
+  .col-xl-7 .head-sm-menu .navbar-collapse-two a {
+    font-size: 14px;
+    color: #444;
+    line-height: 42px;
+    padding: 0 10px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-two .navbar-toggler,
+  .col-xl-7 .head-sm-menu .navbar-collapse-two .navbar-toggler {
+    border: none;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-two {
+    z-index: 9999;
+    margin-top: -42px;
+    height: calc(100vh - 42px);
   }
 }
 body {
@@ -190,7 +257,6 @@ body .container-fluid .row .col-xl-7 .felaol-nav-tabs li:nth-child(2) a {
   border-bottom: none;
 }
 body .container-fluid .row .col-xl-7 .felaol-tab-content {
-  width: 720px;
   overflow: hidden;
 }
 body .container-fluid .row .col-xl-7 .felaol-tab-content .one {
