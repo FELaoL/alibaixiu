@@ -6,10 +6,18 @@
 @media screen and (min-width: 1024px) {
 }
 @media screen and (min-width: 879px) {
+  .col-xl-2 {
+    width: 190px;
+    max-width: 190px;
+  }
 }
 @media screen and (min-width: 720px) {
 }
 @media screen and (max-width: 879px) {
+  .col-xl-2 {
+    width: 160px;
+    max-width: 160px;
+  }
 }
 @media screen and (max-width: 720px) {
 }
@@ -26,8 +34,6 @@ body .container-fluid .row {
 }
 body .container-fluid .row .col-xl-2 {
   padding: 0;
-  width: 190px;
-  max-width: 190px;
   background-color: #f6f6f6;
 }
 body .container-fluid .row .col-xl-2 img {

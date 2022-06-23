@@ -1,3 +1,5 @@
+// ①、左侧布局宽度变化大于879 190否则160
+
 @media screen and (min-width: 1280px) {
 	.container-fluid {
 		width: 1280px;
@@ -12,9 +14,11 @@
 	// }
 }
 @media screen and (min-width: 879px) {
-	// .col-xl-2 {
-	// 	width: 190px;
-	// 	max-width: 190px;
+    .col-xl-2 {
+        // ① start
+		width: 190px;
+		max-width: 190px;
+        // ① end
 
 	// 	.felaol-nav-item {
 	// 		height: 44px;
@@ -31,7 +35,8 @@
 	// 			width: 112px;
 	// 		}
 	// 	}
-	// }
+	}
+    
 }
 @media screen and (min-width: 720px) {
 	// .col-xl-7 {
@@ -45,9 +50,11 @@
 	// }
 }
 @media screen and (max-width: 879px) {
-	// .col-xl-2 {
-	// 	width: 160px;
-	// 	max-width: 160px;
+    .col-xl-2 {
+        // ① start
+		width: 160px;
+		max-width: 160px;
+        // ① end
 
 	// 	.felaol-nav-item {
 	// 		height: 40px;
@@ -65,7 +72,7 @@
 	// 			width: 102px;
 	// 		}
 	// 	}
-	// }
+	}
 }
 @media screen and (max-width: 720px) {
 	// .d-sm-block {
@@ -161,8 +168,10 @@ body {
 			// 左侧
 			.col-xl-2 {
 				padding: 0;
-                width: 190px;
-                max-width: 190px;
+                // ① start
+                // width: 190px;
+                // max-width: 190px;
+                // ① end
 				background-color: #f6f6f6;
 				// 左侧logo
 				img {
