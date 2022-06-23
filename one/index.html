@@ -47,20 +47,20 @@
 					<div class="head-sm-menu d-block d-sm-none">
 						<nav class="navbar navbar-one">
 							<img src="./images/xl-mt-logo.png" alt="" />
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerOne" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerOne" aria-controls="navbarTogglerOne" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="bi bi-search"></span>
 							</button>
 						</nav>
-						<nav class="navbar navbar-two navbar-light bg-light">
+						<nav class="navbar navbar-two navbar-light bg-light collapse navbar-collapse multi-collapse show closeCollapse" id="navbarTogglerFour">
 							<div class="d-flex flex-row">
-								<a href="javascript:;" class="nav-link">📡 新闻</a>
-								<a href="javascript:;" class="nav-link">📽 生活</a>
-								<a href="javascript:;" class="nav-link">🌴 自然</a>
-								<a href="javascript:;" class="nav-link">⌚️ 科技</a>
-								<a href="javascript:;" class="nav-link">🎁 奇趣</a>
-								<a href="javascript:;" class="nav-link">🍔 美食</a>
+								<a href="javascript:;" class="nav-link" style="z-index: 1">📡 新闻</a>
+								<a href="javascript:;" class="nav-link" style="z-index: 1">📽 生活</a>
+								<a href="javascript:;" class="nav-link" style="z-index: 1">🌴 自然</a>
+								<a href="javascript:;" class="nav-link" style="z-index: 1">⌚️ 科技</a>
+								<a href="javascript:;" class="nav-link" style="z-index: 1">🎁 奇趣</a>
+								<a href="javascript:;" class="nav-link" style="z-index: 1">🍔 美食</a>
 							</div>
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerTwo" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarTogglerTwo navbarTogglerThree" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 						</nav>
@@ -70,7 +70,7 @@
 								<button class="btn btn-outline-success" type="submit">搜索</button>
 							</form>
 						</div>
-						<div class="collapse navbar-collapse navbar-collapse-two" id="navbarTogglerTwo">
+						<div class="collapse navbar-collapse navbar-collapse-two multi-collapse position-relative bg-light navbar-light closeCollapse" id="navbarTogglerTwo">
 							<ul class="nav flex-column">
 								<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaol-nav-link">📡 新闻</a></li>
 								<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaol-nav-link">📽 生活</a></li>
@@ -79,9 +79,12 @@
 								<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaol-nav-link">🎁 奇趣</a></li>
 								<li class="nav-item felaol-nav-item"><a href="javascript:;" class="nav-link felaol-nav-link">🍔 美食</a></li>
 							</ul>
+							<button class="navbar-toggler position-absolute fixed-top" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarTogglerTwo navbarTogglerThree" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
 						</div>
 					</div>
-					<div class="middle-body">
+					<div class="middle-body collapse multi-collapse show closeCollapse" id="navbarTogglerThree">
 						<!-- 中间上方的图片 -->
 						<div class="row">
 							<div class="col-6">
