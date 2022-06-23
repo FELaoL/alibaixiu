@@ -18,6 +18,12 @@
     padding: 0;
     padding-left: 25px;
   }
+  .col-xl-2 .felaol-navbar {
+    padding: 15px 0 31px 15px;
+  }
+  .col-xl-2 .felaol-navbar .felaol-form-control {
+    width: 112px;
+  }
 }
 @media screen and (min-width: 720px) {
 }
@@ -33,6 +39,12 @@
   .col-xl-2 .felaol-nav-item .felaol-nav-link {
     padding: 0;
     padding-left: 15px;
+  }
+  .col-xl-2 .felaol-navbar {
+    padding: 15px 0 31px 5px;
+  }
+  .col-xl-2 .felaol-navbar .felaol-form-control {
+    width: 102px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -69,13 +81,11 @@ body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link:hover {
 body .container-fluid .row .col-xl-2 .felaol-navbar {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  padding: 15px 0 31px 15px;
 }
 body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline {
   padding-top: 10px;
 }
 body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-form-control {
-  width: 112px;
   height: 34px;
   padding: 5px 5px 5px 10px;
   background-color: #fff;

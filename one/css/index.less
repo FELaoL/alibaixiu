@@ -1,6 +1,7 @@
 // ①、左侧布局宽度变化大于879 190否则160
 // ②、右侧布局宽度从190变化到160后，tab栏行高从44变化成40
 // ③、右侧布局宽度从190变化到160后，tab左内边距的变化从25变化到15
+// ④、右侧布局宽度从190变化到160后，表单左内边距的变化从15变化到5，输入框的宽度从112变化到102
 
 @media screen and (min-width: 1280px) {
 	.container-fluid {
@@ -34,12 +35,14 @@
 				padding-left: 25px;
 				// ③ end
 			}
-			// }
-			// 	.felaol-navbar {
-			// 		padding: 15px 0 31px 15px;
-			// 		.felaol-form-control {
-			// 			width: 112px;
-			// 		}
+		}
+		.felaol-navbar {
+			// ④ start
+			padding: 15px 0 31px 15px;
+			.felaol-form-control {
+				width: 112px;
+			}
+			// ④ end
 		}
 	}
 }
@@ -73,13 +76,15 @@
 				padding-left: 15px;
 				// ③ end
 			}
-			// 	}
-			// 	.felaol-navbar {
-			// 		padding: 15px 0 31px 5px;
+		}
+		.felaol-navbar {
+			// ④ start
+			padding: 15px 0 31px 5px;
 
-			// 		.felaol-form-control {
-			// 			width: 102px;
-			// 		}
+			.felaol-form-control {
+				width: 102px;
+			}
+			// ④ end
 		}
 	}
 }
@@ -216,12 +221,16 @@ body {
 				.felaol-navbar {
 					border-top: 1px solid #eee;
 					border-bottom: 1px solid #eee;
-					padding: 15px 0 31px 15px;
+					// ④ start
+					// padding: 15px 0 31px 15px;
+					// ④ end
 
 					.felaol-form-inline {
 						padding-top: 10px;
 						.felaol-form-control {
-							width: 112px;
+							// ④ start
+							// width: 112px;
+							// ④ end
 							height: 34px;
 							padding: 5px 5px 5px 10px;
 							background-color: #fff;
