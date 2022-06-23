@@ -6,10 +6,25 @@
 // ⑥、右侧布局根据屏幕大小1024大于时显示，小于隐藏。
 // ⑦、左侧布局根据屏幕大小720大于时显示，小于隐藏，中间顶部导航大于时隐藏，小于显示
 // ⑧、顶部导航样式编写、及除顶部导航栏外，其他内边距问题。
+// ⑨、中间宽度，大于1024时最大宽度为770 其他的自适应
 
+// 1024-1280
+// 879-1024
+// 720 - 1024
 @media screen and (min-width: 1280px) {
 	.container-fluid {
 		width: 1280px;
+	}
+	.col-xl-7 {
+		// ⑨ start
+		// max-width: 770px;
+		width: 770px;
+		// ⑨ end
+	}
+	.felaol-tab-content {
+		// ⑨ start
+		width: 720px;
+		// ⑨ end
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -18,8 +33,30 @@
 		display: block !important;
 	}
 	// ⑥ end
+	.col-xl-7 {
+		// ⑨ start
+		// max-width: 770px;
+		width: calc(100vw - 190px - 320px);
+		// ⑨ end
+	}
+	.felaol-tab-content {
+		// ⑨ start
+		width: calc(100vw - 190px - 320px - 50px);
+		// ⑨ end
+	}
 }
 @media screen and (min-width: 879px) {
+	.col-xl-7 {
+		// ⑨ start
+		// max-width: 770px;
+		width: calc(100vw - 190px);
+		// ⑨ end
+	}
+	.felaol-tab-content {
+		// ⑨ start
+		width: calc(100vw - 190px - 50px);
+		// ⑨ end
+	}
 	.col-xl-2 {
 		// ① start
 		width: 190px;
@@ -57,6 +94,17 @@
 	// ⑦ end
 }
 @media screen and (max-width: 879px) {
+	.col-xl-7 {
+		// ⑨ start
+		// max-width: 770px;
+		width: calc(100vw - 160px);
+		// ⑨ end
+	}
+	.felaol-tab-content {
+		// ⑨ start
+		width: calc(100vw - 160px - 50px);
+		// ⑨ end
+	}
 	.col-xl-2 {
 		// ① start
 		width: 160px;
@@ -88,6 +136,17 @@
 	}
 }
 @media screen and (max-width: 720px) {
+	.col-xl-7 {
+		// ⑨ start
+		// max-width: 770px;
+		width: 100vw // ⑨ end
+;
+	}
+	.felaol-tab-content {
+		// ⑨ start
+		width: calc(100vw - 50px);
+		// ⑨ end
+	}
 	// ⑦ start
 	.d-sm-none {
 		display: block !important;
@@ -269,7 +328,9 @@ body {
 				padding: 0;
 				// ⑨ end
 				flex: 1;
-				max-width: 790px;
+				// ⑨ start
+				// max-width: 790px;
+				// ⑨ end
 
 				.middle-body {
 					// ⑨ start
@@ -359,7 +420,9 @@ body {
 					}
 
 					.felaol-tab-content {
-						width: 720px;
+						// ⑨ start
+						// width: 720px;
+						// ⑨ end
 						overflow: hidden;
 						.one {
 							padding-top: 20px;

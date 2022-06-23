@@ -2,13 +2,31 @@
   .container-fluid {
     width: 1280px;
   }
+  .col-xl-7 {
+    width: 770px;
+  }
+  .felaol-tab-content {
+    width: 720px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .d-xl-block {
     display: block !important;
   }
+  .col-xl-7 {
+    width: calc(100vw - 190px - 320px);
+  }
+  .felaol-tab-content {
+    width: calc(100vw - 190px - 320px - 50px);
+  }
 }
 @media screen and (min-width: 879px) {
+  .col-xl-7 {
+    width: calc(100vw - 190px);
+  }
+  .felaol-tab-content {
+    width: calc(100vw - 190px - 50px);
+  }
   .col-xl-2 {
     width: 190px;
     max-width: 190px;
@@ -34,6 +52,12 @@
   }
 }
 @media screen and (max-width: 879px) {
+  .col-xl-7 {
+    width: calc(100vw - 160px);
+  }
+  .felaol-tab-content {
+    width: calc(100vw - 160px - 50px);
+  }
   .col-xl-2 {
     width: 160px;
     max-width: 160px;
@@ -54,6 +78,12 @@
   }
 }
 @media screen and (max-width: 720px) {
+  .col-xl-7 {
+    width: 100vw;
+  }
+  .felaol-tab-content {
+    width: calc(100vw - 50px);
+  }
   .d-sm-none {
     display: block !important;
   }
@@ -184,7 +214,6 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
 body .container-fluid .row .col-xl-7 {
   padding: 0;
   flex: 1;
-  max-width: 790px;
 }
 body .container-fluid .row .col-xl-7 .middle-body {
   padding: 20px 25px 0;
@@ -258,7 +287,6 @@ body .container-fluid .row .col-xl-7 .middle-body .felaol-nav-tabs li:nth-child(
   border-bottom: none;
 }
 body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content {
-  width: 720px;
   overflow: hidden;
 }
 body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .one {
