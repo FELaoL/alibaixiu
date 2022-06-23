@@ -4,6 +4,7 @@
 // ④、左侧布局宽度从190变化到160后，表单左内边距的变化从15变化到5，输入框的宽度从112变化到102
 // ⑤、左侧布局宽度从190变化到160后，左侧logo自适应
 // ⑥、右侧布局根据屏幕大小1024大于时显示，小于隐藏。
+// ⑦、左侧布局根据屏幕大小720大于时显示，小于隐藏，中间顶部导航大于时隐藏，小于显示
 
 @media screen and (min-width: 1280px) {
 	.container-fluid {
@@ -54,12 +55,11 @@
 	// .col-xl-7 {
 	// 	padding: 20px 25px 0;
 	// }
-	// .d-md-block {
-	// 	display: block !important;
-	// }
-	// .d-sm-block {
-	// 	display: none !important;
-	// }
+	// ⑦ start
+	.d-md-block {
+		display: block !important;
+	}
+	// ⑦ end
 }
 @media screen and (max-width: 879px) {
 	.col-xl-2 {
@@ -93,9 +93,11 @@
 	}
 }
 @media screen and (max-width: 720px) {
-	// .d-sm-block {
-	// 	display: block !important;
-	// }
+	// ⑦ start
+	.d-sm-none {
+		display: block !important;
+	}
+	// ⑦ end
 	// .col-xl-7 {
 	// 	padding: 0;
 	// 	background-color: #fff;

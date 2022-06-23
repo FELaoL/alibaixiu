@@ -29,6 +29,9 @@
   }
 }
 @media screen and (min-width: 720px) {
+  .d-md-block {
+    display: block !important;
+  }
 }
 @media screen and (max-width: 879px) {
   .col-xl-2 {
@@ -51,6 +54,9 @@
   }
 }
 @media screen and (max-width: 720px) {
+  .d-sm-none {
+    display: block !important;
+  }
 }
 body {
   background-color: #eee;
