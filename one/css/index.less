@@ -1,4 +1,5 @@
 // ①、左侧布局宽度变化大于879 190否则160
+// ②、右侧布局宽度从190变化到160后，tab栏行高从44变化成40
 
 @media screen and (min-width: 1280px) {
 	.container-fluid {
@@ -14,29 +15,30 @@
 	// }
 }
 @media screen and (min-width: 879px) {
-    .col-xl-2 {
-        // ① start
+	.col-xl-2 {
+		// ① start
 		width: 190px;
 		max-width: 190px;
-        // ① end
+		// ① end
 
-	// 	.felaol-nav-item {
-	// 		height: 44px;
-	// 		line-height: 44px;
+		.felaol-nav-item {
+			// ② start
+			height: 44px;
+			line-height: 44px;
+			// ② end
 
-	// 		.felaol-nav-link {
-	// 			padding: 0;
-	// 			padding-left: 25px;
-	// 		}
-	// 	}
-	// 	.felaol-navbar {
-	// 		padding: 15px 0 31px 15px;
-	// 		.felaol-form-control {
-	// 			width: 112px;
-	// 		}
-	// 	}
+			// 		.felaol-nav-link {
+			// 			padding: 0;
+			// 			padding-left: 25px;
+			// 		}
+			// 	}
+			// 	.felaol-navbar {
+			// 		padding: 15px 0 31px 15px;
+			// 		.felaol-form-control {
+			// 			width: 112px;
+			// 		}
+		}
 	}
-    
 }
 @media screen and (min-width: 720px) {
 	// .col-xl-7 {
@@ -50,28 +52,30 @@
 	// }
 }
 @media screen and (max-width: 879px) {
-    .col-xl-2 {
-        // ① start
+	.col-xl-2 {
+		// ① start
 		width: 160px;
 		max-width: 160px;
-        // ① end
+		// ① end
 
-	// 	.felaol-nav-item {
-	// 		height: 40px;
-	// 		line-height: 40px;
+		.felaol-nav-item {
+			// ② start
+			height: 40px;
+			line-height: 40px;
+			// ② end
 
-	// 		.felaol-nav-link {
-	// 			padding: 0;
-	// 			padding-left: 15px;
-	// 		}
-	// 	}
-	// 	.felaol-navbar {
-	// 		padding: 15px 0 31px 5px;
+			// 		.felaol-nav-link {
+			// 			padding: 0;
+			// 			padding-left: 15px;
+			// 		}
+			// 	}
+			// 	.felaol-navbar {
+			// 		padding: 15px 0 31px 5px;
 
-	// 		.felaol-form-control {
-	// 			width: 102px;
-	// 		}
-	// 	}
+			// 		.felaol-form-control {
+			// 			width: 102px;
+			// 		}
+		}
 	}
 }
 @media screen and (max-width: 720px) {
@@ -82,7 +86,7 @@
 	// 	padding: 0;
 	// 	background-color: #fff;
 	// 	.head-sm-menu {
-            
+
 	// 		.navbar-one {
 	// 			padding: 0;
 	// 			// height: 42px;
@@ -144,11 +148,11 @@
 	// 				border: none;
 	// 			}
 	// 		}
-    //         .navbar-collapse-two {
-    //             z-index: 9999;
-    //             margin-top: -42px;
-    //             height: calc(100vh - 42px);
-    //         }
+	//         .navbar-collapse-two {
+	//             z-index: 9999;
+	//             margin-top: -42px;
+	//             height: calc(100vh - 42px);
+	//         }
 	// 	}
 	// }
 }
@@ -168,26 +172,28 @@ body {
 			// 左侧
 			.col-xl-2 {
 				padding: 0;
-                // ① start
-                // width: 190px;
-                // max-width: 190px;
-                // ① end
+				// ① start
+				// width: 190px;
+				// max-width: 190px;
+				// ① end
 				background-color: #f6f6f6;
 				// 左侧logo
 				img {
 					width: 100%;
-                    height: 120px;
+					height: 120px;
 					background-color: #ff5e52;
 				}
 
 				// 修改默认的nav-item样式
 				.felaol-nav-item {
-                    height: 44px;
-                    line-height: 44px;
+					// ② start
+					// height: 44px;
+					// line-height: 44px;
+					// ② end
 
 					.felaol-nav-link {
-                        padding: 0;
-                        padding-left: 25px;
+						padding: 0;
+						padding-left: 25px;
 						font-size: 15px;
 						color: #666;
 						background-color: #f6f6f6;
@@ -203,12 +209,12 @@ body {
 				.felaol-navbar {
 					border-top: 1px solid #eee;
 					border-bottom: 1px solid #eee;
-                    padding: 15px 0 31px 15px;
+					padding: 15px 0 31px 15px;
 
 					.felaol-form-inline {
 						padding-top: 10px;
 						.felaol-form-control {
-                            width: 112px;
+							width: 112px;
 							height: 34px;
 							padding: 5px 5px 5px 10px;
 							background-color: #fff;
@@ -233,15 +239,15 @@ body {
 			}
 
 			.col-xl-7 {
-                padding: 20px 25px 0;
+				padding: 20px 25px 0;
 				flex: 1;
-                max-width: 790px;
+				max-width: 790px;
 
 				.row {
 					padding-bottom: 10px;
 					margin-bottom: 10px;
 					.col-6 {
-                        width: 360px;
+						width: 360px;
 						height: 266px;
 						padding: 0;
 
@@ -321,7 +327,7 @@ body {
 				}
 
 				.felaol-tab-content {
-                    width: 720px;
+					width: 720px;
 					overflow: hidden;
 					.one {
 						padding-top: 20px;

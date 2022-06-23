@@ -10,6 +10,10 @@
     width: 190px;
     max-width: 190px;
   }
+  .col-xl-2 .felaol-nav-item {
+    height: 44px;
+    line-height: 44px;
+  }
 }
 @media screen and (min-width: 720px) {
 }
@@ -17,6 +21,10 @@
   .col-xl-2 {
     width: 160px;
     max-width: 160px;
+  }
+  .col-xl-2 .felaol-nav-item {
+    height: 40px;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -40,10 +48,6 @@ body .container-fluid .row .col-xl-2 img {
   width: 100%;
   height: 120px;
   background-color: #ff5e52;
-}
-body .container-fluid .row .col-xl-2 .felaol-nav-item {
-  height: 44px;
-  line-height: 44px;
 }
 body .container-fluid .row .col-xl-2 .felaol-nav-item .felaol-nav-link {
   padding: 0;
