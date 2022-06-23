@@ -5,14 +5,12 @@
 // ⑤、左侧布局宽度从190变化到160后，左侧logo自适应
 // ⑥、右侧布局根据屏幕大小1024大于时显示，小于隐藏。
 // ⑦、左侧布局根据屏幕大小720大于时显示，小于隐藏，中间顶部导航大于时隐藏，小于显示
+// ⑧、顶部导航样式编写、及除顶部导航栏外，其他内边距问题。
 
 @media screen and (min-width: 1280px) {
 	.container-fluid {
 		width: 1280px;
 	}
-	// .col-xl-7 {
-	// 	max-width: 790px;
-	// }
 }
 @media screen and (min-width: 1024px) {
 	// ⑥ start
@@ -52,9 +50,6 @@
 	}
 }
 @media screen and (min-width: 720px) {
-	// .col-xl-7 {
-	// 	padding: 20px 25px 0;
-	// }
 	// ⑦ start
 	.d-md-block {
 		display: block !important;
@@ -98,79 +93,79 @@
 		display: block !important;
 	}
 	// ⑦ end
-	// .col-xl-7 {
-	// 	padding: 0;
-	// 	background-color: #fff;
-	// 	.head-sm-menu {
+	// ⑨ start
+	.col-xl-7 {
+		background-color: #fff;
+		.head-sm-menu {
+			.navbar-one {
+				padding: 0;
+				background-color: #ff5e52;
+				img {
+					height: 42px;
+					margin: 0 auto;
+				}
 
-	// 		.navbar-one {
-	// 			padding: 0;
-	// 			// height: 42px;
-	// 			background-color: #ff5e52;
-	// 			img {
-	// 				height: 42px;
-	// 				margin: 0 auto;
-	// 			}
+				.navbar-toggler {
+					height: 42px;
+					padding: 0 20px;
+					span {
+						color: #fff;
+					}
+				}
+			}
+			.navbar-collapse-one {
+				form {
+					margin: 10px 20.375px;
 
-	// 			.navbar-toggler {
-	// 				height: 42px;
-	// 				padding: 0 20px;
-	// 				span {
-	// 					color: #fff;
-	// 				}
-	// 			}
-	// 		}
-	// 		.navbar-collapse-one {
-	// 			form {
-	// 				margin: 10px 20.375px;
+					input {
+						flex: 1;
+						height: 34px;
+						padding: 5px 5px 5px 10px;
+						background-color: #fff;
+						font-size: 14px;
+						border-radius: 0;
+						margin-right: 0;
+						outline: none;
+					}
 
-	// 				input {
-	// 					flex: 1;
-	// 					height: 34px;
-	// 					padding: 5px 5px 5px 10px;
-	// 					background-color: #fff;
-	// 					font-size: 14px;
-	// 					border-radius: 0;
-	// 					margin-right: 0;
-	// 					outline: none;
-	// 				}
+					button {
+						width: 48px;
+						height: 34px;
+						padding: 6px;
+						border-radius: 0;
+						background-color: #ff5e52;
+						font-size: 14px;
+						color: #fff;
+						border: none;
+					}
+				}
+			}
+			.navbar-two,
+			.navbar-collapse-two {
+				background-color: #fff;
+				padding: 0;
+				padding-left: 10px;
 
-	// 				button {
-	// 					width: 48px;
-	// 					height: 34px;
-	// 					padding: 6px;
-	// 					border-radius: 0;
-	// 					background-color: #ff5e52;
-	// 					font-size: 14px;
-	// 					color: #fff;
-	// 					border: none;
-	// 				}
-	// 			}
-	// 		}
-	// 		.navbar-two,
-	// 		.navbar-collapse-two {
-	// 			background-color: #fff;
-	// 			padding: 0;
-	// 			padding-left: 10px;
+				a {
+					font-size: 14px;
+					color: #444;
+					line-height: 42px;
+					padding: 0 10px;
+					font-weight: 700;
+				}
 
-	// 			a {
-	// 				font-size: 14px;
-	// 				color: #444;
-	// 				line-height: 42px;
-	// 				padding: 0 10px;
-	// 			}
-
-	// 			.navbar-toggler {
-	// 				border: none;
-	// 			}
-	// 		}
-	//         .navbar-collapse-two {
-	//             z-index: 9999;
-	//             margin-top: -42px;
-	//             height: calc(100vh - 42px);
-	//         }
-	// 	}
-	// }
+				.navbar-toggler {
+					border: none;
+				}
+			}
+			.navbar-collapse-two {
+				z-index: 9999;
+				margin-top: -42px;
+				height: calc(100vh - 42px);
+			}
+		}
+	}
+	// ⑨ end
 }
 // 公共样式
 body {
@@ -263,234 +258,242 @@ body {
 			}
 
 			.col-xl-7 {
-				padding: 20px 25px 0;
+				// ⑨ start
+				// padding: 20px 25px 0;
+				padding: 0;
+				// ⑨ end
 				flex: 1;
 				max-width: 790px;
 
-				.row {
-					padding-bottom: 10px;
-					margin-bottom: 10px;
-					.col-6 {
-						width: 360px;
-						height: 266px;
-						padding: 0;
-
-						.carousel {
-							margin-bottom: 10px;
-							.carousel-caption {
-								height: 41px;
-								bottom: 0;
-								left: 0;
-								padding: 4px 10px 0;
-								background-color: rgba(0, 0, 0, 0.7);
-								text-align: left;
-
-								&:hover {
-									background-color: #ff5e52;
-								}
-
-								h5 {
-									line-height: 34px;
-									margin: 0;
-									font-size: 16px;
-								}
-							}
-						}
-					}
-
-					.col {
-						padding: 0;
-						width: 360px;
-						height: 266px;
-
-						.felaol-carousel {
-							width: calc(50% - 10px) !important;
-							height: calc(50% - 5px) !important;
-							margin-left: 10px;
-							margin-bottom: 10px;
-
-							.carousel-caption {
-								height: 41px;
-								bottom: 0;
-								left: 0;
-								padding: 4px 10px 0;
-								background-color: rgba(0, 0, 0, 0.7);
-								text-align: left;
-
-								&:hover {
-									background-color: #ff5e52;
-								}
-
-								h5 {
-									line-height: 17px;
-									margin: 0;
-									font-size: 12px;
-								}
-							}
-						}
-					}
-				}
-				// tabs
-				.felaol-nav-tabs {
-					li {
-						a {
-							padding: 0;
-							font-size: 20px;
-							line-height: 34px;
-							border: none;
-							border-bottom: 2px solid #ff5e52;
-						}
-
-						&:nth-child(2) a {
-							font-size: 13px;
-							line-height: 32px;
-							color: #999;
-							border-bottom: none;
-						}
-					}
-				}
-
-				.felaol-tab-content {
-					width: 720px;
-					overflow: hidden;
-					.one {
-						padding-top: 20px;
-						margin-bottom: 20px;
-						line-height: 20px;
-						font-size: 14px;
-						color: #444;
-					}
-					.two {
-						width: 730px;
-						height: 213px;
-						padding-top: 15px;
+				.middle-body {
+					// ⑨ start
+					padding: 20px 25px 0;
+					// ⑨ end
+					.row {
+						padding-bottom: 10px;
 						margin-bottom: 10px;
-
-						li {
-							width: calc(25% - 10px) !important;
-							margin-right: 10px;
-							border: none;
+						.col-6 {
+							width: 360px;
+							height: 266px;
 							padding: 0;
 
-							&:last-child {
-								margin-right: 10px;
-							}
-
-							img {
-								width: 132px;
-								margin-bottom: 5px;
-							}
-
-							& > div {
-								color: #666;
-								line-height: 20px;
-								font-size: 14px;
-							}
-
-							&:hover div {
-								color: #ff5e52;
-							}
-						}
-					}
-
-					.three {
-						.list-group-item {
-							padding: 25px 0;
-							border: none;
-							border-bottom: 1px solid #eee;
-							.line1 {
+							.carousel {
 								margin-bottom: 10px;
-								.tag {
-									position: relative;
-									font-size: 12px;
-									line-height: 24px;
-									background-color: #ff5e52;
-									color: #fff;
-									// 撑开左右两边
-									padding: 0 7px;
-									// 距离右边的距离
-									margin-right: 9px;
-
-									&::after {
-										content: "";
-										position: absolute;
-										right: -4px;
-										top: 50%;
-										transform: translateY(-50%);
-										border-top: 4px solid transparent;
-										border-bottom: 4px solid transparent;
-										border-left: 4px solid #ff5e52;
-									}
-								}
-								.title {
-									font-size: 22px;
-									color: #444;
-									line-height: 25px;
+								.carousel-caption {
+									height: 41px;
+									bottom: 0;
+									left: 0;
+									padding: 4px 10px 0;
+									background-color: rgba(0, 0, 0, 0.7);
+									text-align: left;
 
 									&:hover {
-										color: #ff5e52;
-									}
-								}
-
-								.bi {
-									line-height: 25px;
-									margin-left: 10px;
-									font-style: normal;
-									font-size: 12px;
-									color: #999;
-								}
-							}
-							.line2 {
-								font-size: 12px;
-								color: #999;
-								line-height: 20px;
-							}
-							.line3 {
-								margin-top: 10px;
-								.left {
-									img {
-										width: 175.5px;
-										height: 132px;
-										margin-bottom: 6px;
-									}
-								}
-								.right {
-									padding-left: 15px;
-									.a_body {
-										font-size: 14px;
-										line-height: 22px;
-										color: #777;
-										margin-bottom: 10px;
+										background-color: #ff5e52;
 									}
 
-									.a_footer {
+									h5 {
+										line-height: 34px;
+										margin: 0;
+										font-size: 16px;
+									}
+								}
+							}
+						}
+
+						.col {
+							padding: 0;
+							width: 360px;
+							height: 266px;
+
+							.felaol-carousel {
+								width: calc(50% - 10px) !important;
+								height: calc(50% - 5px) !important;
+								margin-left: 10px;
+								margin-bottom: 10px;
+
+								.carousel-caption {
+									height: 41px;
+									bottom: 0;
+									left: 0;
+									padding: 4px 10px 0;
+									background-color: rgba(0, 0, 0, 0.7);
+									text-align: left;
+
+									&:hover {
+										background-color: #ff5e52;
+									}
+
+									h5 {
+										line-height: 17px;
+										margin: 0;
 										font-size: 12px;
-										line-height: 15px;
-										color: #999;
-
-										i {
-											font-style: normal;
-											margin-left: 20px;
-										}
 									}
-								}
-								// 对于四个图片的特殊样式
-								.right_4 {
-									padding-left: 0;
 								}
 							}
 						}
 					}
-				}
+					// tabs
+					.felaol-nav-tabs {
+						li {
+							a {
+								padding: 0;
+								font-size: 20px;
+								line-height: 34px;
+								border: none;
+								border-bottom: 2px solid #ff5e52;
+							}
 
-				.footer {
-					padding: 20px 0 30px;
-					font-size: 12px;
-					color: #aaa;
-					line-height: 15px;
+							&:nth-child(2) a {
+								font-size: 13px;
+								line-height: 32px;
+								color: #999;
+								border-bottom: none;
+							}
+						}
+					}
 
-					div:nth-child(1) {
-						margin-bottom: 20px;
+					.felaol-tab-content {
+						width: 720px;
+						overflow: hidden;
+						.one {
+							padding-top: 20px;
+							margin-bottom: 20px;
+							line-height: 20px;
+							font-size: 14px;
+							color: #444;
+						}
+						.two {
+							width: 730px;
+							height: 213px;
+							padding-top: 15px;
+							margin-bottom: 10px;
+
+							li {
+								width: calc(25% - 10px) !important;
+								margin-right: 10px;
+								border: none;
+								padding: 0;
+
+								&:last-child {
+									margin-right: 10px;
+								}
+
+								img {
+									width: 132px;
+									margin-bottom: 5px;
+								}
+
+								& > div {
+									color: #666;
+									line-height: 20px;
+									font-size: 14px;
+								}
+
+								&:hover div {
+									color: #ff5e52;
+								}
+							}
+						}
+
+						.three {
+							.list-group-item {
+								padding: 25px 0;
+								border: none;
+								border-bottom: 1px solid #eee;
+								.line1 {
+									margin-bottom: 10px;
+									.tag {
+										position: relative;
+										font-size: 12px;
+										line-height: 24px;
+										background-color: #ff5e52;
+										color: #fff;
+										// 撑开左右两边
+										padding: 0 7px;
+										// 距离右边的距离
+										margin-right: 9px;
+
+										&::after {
+											content: "";
+											position: absolute;
+											right: -4px;
+											top: 50%;
+											transform: translateY(-50%);
+											border-top: 4px solid transparent;
+											border-bottom: 4px solid transparent;
+											border-left: 4px solid #ff5e52;
+										}
+									}
+									.title {
+										font-size: 22px;
+										color: #444;
+										line-height: 25px;
+
+										&:hover {
+											color: #ff5e52;
+										}
+									}
+
+									.bi {
+										line-height: 25px;
+										margin-left: 10px;
+										font-style: normal;
+										font-size: 12px;
+										color: #999;
+									}
+								}
+								.line2 {
+									font-size: 12px;
+									color: #999;
+									line-height: 20px;
+								}
+								.line3 {
+									margin-top: 10px;
+									.left {
+										img {
+											width: 175.5px;
+											height: 132px;
+											margin-bottom: 6px;
+										}
+									}
+									.right {
+										padding-left: 15px;
+										.a_body {
+											font-size: 14px;
+											line-height: 22px;
+											color: #777;
+											margin-bottom: 10px;
+										}
+
+										.a_footer {
+											font-size: 12px;
+											line-height: 15px;
+											color: #999;
+
+											i {
+												font-style: normal;
+												margin-left: 20px;
+											}
+										}
+									}
+									// 对于四个图片的特殊样式
+									.right_4 {
+										padding-left: 0;
+									}
+								}
+							}
+						}
+					}
+
+					.footer {
+						padding: 20px 0 30px;
+						font-size: 12px;
+						color: #aaa;
+						line-height: 15px;
+
+						div:nth-child(1) {
+							margin-bottom: 20px;
+						}
 					}
 				}
 			}

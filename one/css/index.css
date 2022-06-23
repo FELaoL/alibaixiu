@@ -57,6 +57,70 @@
   .d-sm-none {
     display: block !important;
   }
+  .col-xl-7 {
+    background-color: #fff;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one {
+    padding: 0;
+    background-color: #ff5e52;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one img {
+    height: 42px;
+    margin: 0 auto;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one .navbar-toggler {
+    height: 42px;
+    padding: 0 20px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-one .navbar-toggler span {
+    color: #fff;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-one form {
+    margin: 10px 20.375px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-one form input {
+    flex: 1;
+    height: 34px;
+    padding: 5px 5px 5px 10px;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    margin-right: 0;
+    outline: none;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-one form button {
+    width: 48px;
+    height: 34px;
+    padding: 6px;
+    border-radius: 0;
+    background-color: #ff5e52;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+  }
+  .col-xl-7 .head-sm-menu .navbar-two,
+  .col-xl-7 .head-sm-menu .navbar-collapse-two {
+    background-color: #fff;
+    padding: 0;
+    padding-left: 10px;
+  }
+  .col-xl-7 .head-sm-menu .navbar-two a,
+  .col-xl-7 .head-sm-menu .navbar-collapse-two a {
+    font-size: 14px;
+    color: #444;
+    line-height: 42px;
+    padding: 0 10px;
+    font-weight: 700;
+  }
+  .col-xl-7 .head-sm-menu .navbar-two .navbar-toggler,
+  .col-xl-7 .head-sm-menu .navbar-collapse-two .navbar-toggler {
+    border: none;
+  }
+  .col-xl-7 .head-sm-menu .navbar-collapse-two {
+    z-index: 9999;
+    margin-top: -42px;
+    height: calc(100vh - 42px);
+  }
 }
 body {
   background-color: #eee;
@@ -113,23 +177,26 @@ body .container-fluid .row .col-xl-2 .felaol-navbar .felaol-form-inline .felaol-
   border: none;
 }
 body .container-fluid .row .col-xl-7 {
-  padding: 20px 25px 0;
+  padding: 0;
   flex: 1;
   max-width: 790px;
 }
-body .container-fluid .row .col-xl-7 .row {
+body .container-fluid .row .col-xl-7 .middle-body {
+  padding: 20px 25px 0;
+}
+body .container-fluid .row .col-xl-7 .middle-body .row {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .row .col-6 {
+body .container-fluid .row .col-xl-7 .middle-body .row .col-6 {
   width: 360px;
   height: 266px;
   padding: 0;
 }
-body .container-fluid .row .col-xl-7 .row .col-6 .carousel {
+body .container-fluid .row .col-xl-7 .middle-body .row .col-6 .carousel {
   margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .row .col-6 .carousel .carousel-caption {
+body .container-fluid .row .col-xl-7 .middle-body .row .col-6 .carousel .carousel-caption {
   height: 41px;
   bottom: 0;
   left: 0;
@@ -137,26 +204,26 @@ body .container-fluid .row .col-xl-7 .row .col-6 .carousel .carousel-caption {
   background-color: rgba(0, 0, 0, 0.7);
   text-align: left;
 }
-body .container-fluid .row .col-xl-7 .row .col-6 .carousel .carousel-caption:hover {
+body .container-fluid .row .col-xl-7 .middle-body .row .col-6 .carousel .carousel-caption:hover {
   background-color: #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .row .col-6 .carousel .carousel-caption h5 {
+body .container-fluid .row .col-xl-7 .middle-body .row .col-6 .carousel .carousel-caption h5 {
   line-height: 34px;
   margin: 0;
   font-size: 16px;
 }
-body .container-fluid .row .col-xl-7 .row .col {
+body .container-fluid .row .col-xl-7 .middle-body .row .col {
   padding: 0;
   width: 360px;
   height: 266px;
 }
-body .container-fluid .row .col-xl-7 .row .col .felaol-carousel {
+body .container-fluid .row .col-xl-7 .middle-body .row .col .felaol-carousel {
   width: calc(50% - 10px) !important;
   height: calc(50% - 5px) !important;
   margin-left: 10px;
   margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .row .col .felaol-carousel .carousel-caption {
+body .container-fluid .row .col-xl-7 .middle-body .row .col .felaol-carousel .carousel-caption {
   height: 41px;
   bottom: 0;
   left: 0;
@@ -164,74 +231,74 @@ body .container-fluid .row .col-xl-7 .row .col .felaol-carousel .carousel-captio
   background-color: rgba(0, 0, 0, 0.7);
   text-align: left;
 }
-body .container-fluid .row .col-xl-7 .row .col .felaol-carousel .carousel-caption:hover {
+body .container-fluid .row .col-xl-7 .middle-body .row .col .felaol-carousel .carousel-caption:hover {
   background-color: #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .row .col .felaol-carousel .carousel-caption h5 {
+body .container-fluid .row .col-xl-7 .middle-body .row .col .felaol-carousel .carousel-caption h5 {
   line-height: 17px;
   margin: 0;
   font-size: 12px;
 }
-body .container-fluid .row .col-xl-7 .felaol-nav-tabs li a {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-nav-tabs li a {
   padding: 0;
   font-size: 20px;
   line-height: 34px;
   border: none;
   border-bottom: 2px solid #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .felaol-nav-tabs li:nth-child(2) a {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-nav-tabs li:nth-child(2) a {
   font-size: 13px;
   line-height: 32px;
   color: #999;
   border-bottom: none;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content {
   width: 720px;
   overflow: hidden;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .one {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .one {
   padding-top: 20px;
   margin-bottom: 20px;
   line-height: 20px;
   font-size: 14px;
   color: #444;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .two {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two {
   width: 730px;
   height: 213px;
   padding-top: 15px;
   margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .two li {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li {
   width: calc(25% - 10px) !important;
   margin-right: 10px;
   border: none;
   padding: 0;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .two li:last-child {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li:last-child {
   margin-right: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .two li img {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li img {
   width: 132px;
   margin-bottom: 5px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .two li > div {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li > div {
   color: #666;
   line-height: 20px;
   font-size: 14px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .two li:hover div {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li:hover div {
   color: #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item {
   padding: 25px 0;
   border: none;
   border-bottom: 1px solid #eee;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line1 {
   margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .tag {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line1 .tag {
   position: relative;
   font-size: 12px;
   line-height: 24px;
@@ -240,7 +307,7 @@ body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item
   padding: 0 7px;
   margin-right: 9px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .tag::after {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line1 .tag::after {
   content: "";
   position: absolute;
   right: -4px;
@@ -250,62 +317,62 @@ body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item
   border-bottom: 4px solid transparent;
   border-left: 4px solid #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .title {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line1 .title {
   font-size: 22px;
   color: #444;
   line-height: 25px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .title:hover {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line1 .title:hover {
   color: #ff5e52;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line1 .bi {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line1 .bi {
   line-height: 25px;
   margin-left: 10px;
   font-style: normal;
   font-size: 12px;
   color: #999;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line2 {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line2 {
   font-size: 12px;
   color: #999;
   line-height: 20px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 {
   margin-top: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .left img {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 .left img {
   width: 175.5px;
   height: 132px;
   margin-bottom: 6px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 .right {
   padding-left: 15px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right .a_body {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 .right .a_body {
   font-size: 14px;
   line-height: 22px;
   color: #777;
   margin-bottom: 10px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right .a_footer {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 .right .a_footer {
   font-size: 12px;
   line-height: 15px;
   color: #999;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right .a_footer i {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 .right .a_footer i {
   font-style: normal;
   margin-left: 20px;
 }
-body .container-fluid .row .col-xl-7 .felaol-tab-content .three .list-group-item .line3 .right_4 {
+body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .three .list-group-item .line3 .right_4 {
   padding-left: 0;
 }
-body .container-fluid .row .col-xl-7 .footer {
+body .container-fluid .row .col-xl-7 .middle-body .footer {
   padding: 20px 0 30px;
   font-size: 12px;
   color: #aaa;
   line-height: 15px;
 }
-body .container-fluid .row .col-xl-7 .footer div:nth-child(1) {
+body .container-fluid .row .col-xl-7 .middle-body .footer div:nth-child(1) {
   margin-bottom: 20px;
 }
 body .container-fluid .row .col-xl-3 {
