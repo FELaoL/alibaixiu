@@ -312,7 +312,8 @@ body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li:la
   margin-right: 10px;
 }
 body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li img {
-  width: 132px;
+  max-width: 132px;
+  width: 100%;
   margin-bottom: 5px;
 }
 body .container-fluid .row .col-xl-7 .middle-body .felaol-tab-content .two li > div {
