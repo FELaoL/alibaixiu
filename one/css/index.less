@@ -8,9 +8,6 @@
 // ⑧、顶部导航样式编写、及除顶部导航栏外，其他内边距问题。
 // ⑨、中间宽度，大于1024时最大宽度为770 其他的自适应
 
-// 1024-1280
-// 879-1024
-// 720 - 1024
 @media screen and (min-width: 1280px) {
 	.container-fluid {
 		width: 1280px;
@@ -25,6 +22,10 @@
 		// ⑨ start
 		width: 720px;
 		// ⑨ end
+
+		.leftOne img {
+			width: calc(720px * 0.25 - 4.5px) !important;
+		}
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -43,6 +44,10 @@
 		// ⑨ start
 		width: calc(100vw - 190px - 320px - 50px);
 		// ⑨ end
+
+		.leftOne img {
+			width: calc((100vw - 190px - 320px - 50px) * 0.25 - 4.5px) !important;
+		}
 	}
 }
 @media screen and (min-width: 879px) {
@@ -56,6 +61,10 @@
 		// ⑨ start
 		width: calc(100vw - 190px - 50px);
 		// ⑨ end
+
+		.leftOne img {
+			width: calc((100vw - 190px - 50px) * 0.25 - 4.5px) !important;
+		}
 	}
 	.col-xl-2 {
 		// ① start
@@ -93,6 +102,7 @@
 	}
 	// ⑦ end
 }
+
 @media screen and (max-width: 879px) {
 	.col-xl-7 {
 		// ⑨ start
@@ -104,6 +114,9 @@
 		// ⑨ start
 		width: calc(100vw - 160px - 50px);
 		// ⑨ end
+		.leftOne img {
+			width: calc((100vw - 160px - 50px) * 0.25 - 4.5px) !important;
+		}
 	}
 	.col-xl-2 {
 		// ① start
@@ -146,6 +159,9 @@
 		// ⑨ start
 		width: calc(100vw - 50px);
 		// ⑨ end
+		.leftOne img {
+			width: calc((100vw - 50px) * 25% - 4.5px) !important;
+		}
 	}
 	// ⑦ start
 	.d-sm-none {
@@ -231,6 +247,11 @@
 		transition: none !important;
 	}
 	// ⑨ end
+}
+@media screen and (width: 720px) {
+	.d-sm-none {
+		display: none !important;
+	}
 }
 // 公共样式
 body {
@@ -521,13 +542,22 @@ body {
 								}
 								.line3 {
 									margin-top: 10px;
-									.left {
+									.leftOne img,
+									.leftTwo img {
+										margin-bottom: 6px;
+									}
+									.leftTwo {
 										img {
-											width: 175.5px;
-											height: 132px;
-											margin-bottom: 6px;
+											width: calc(25% - 4.5px);
 										}
 									}
+									.leftOne {
+										max-width: 150px;
+									}
+									.leftOne img {
+										max-width: 150px;
+									}
+
 									.right {
 										padding-left: 15px;
 										.a_body {
