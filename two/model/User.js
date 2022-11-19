@@ -62,7 +62,7 @@ const User = mongoose.model("User", UserSchema);
 // 注册数据格式校验
 const validateUser = user => {
 	// 定义对象验证规则
-	const schema = {
+	const schema = Joi.object({
 		nickName: Joi.string().min(2).max(30).required().error(new Error("用户名不符合验证规则")),
 		email: Joi.string()
 			.regex(/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/)
@@ -74,9 +74,9 @@ const validateUser = user => {
 			.error(new Error("密码不符合验证规则")),
 		status: Joi.number().valid(0, 1),
 		role: Joi.string().valid("normal", "admin")
-	};
+	});
 	// 验证
-	return Joi.validate(user, schema, {
+	return schema.validate(user, {
 		// 检测到所有错误
 		abortEarly: false,
 		// 允许对象包含被忽略的未知键
