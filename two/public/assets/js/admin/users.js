@@ -44,3 +44,22 @@ $("#avatar").on("change", function () {
 	});
 });
 // 用户头像上传end
+
+// 展示用户列表start
+// 向服务器端发送请求，索要用户列表数据
+$.ajax({
+	type: "get",
+	url: "/users",
+	success: function (response) {
+		// 使用模板引擎将数据和HTML字符串进行拼接
+		var html = template("userTpl", {
+			data: response
+		});
+		// 将拼接好的字符串显示在页面中
+		$("#userBox").html(html);
+	},
+	error: function () {
+		alert("获取用户列表失败");
+	}
+});
+// 展示用户列表end
