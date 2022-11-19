@@ -63,3 +63,23 @@ $.ajax({
 	}
 });
 // 展示用户列表end
+
+// 用户信息展示start
+// 通过事件委托的方式为编辑按钮添加点击事件
+$("#userBox").on("click", ".edit", function () {
+	// 获取被点击用户的id的值
+	var id = $(this).attr("data-id");
+	// 根据id获取用户的详细信息
+	$.ajax({
+		type: "get",
+		url: "/users/" + id,
+		success: function (response) {
+			var html = template("modifyTpl", response);
+			$("#modifyBox").html(html);
+		},
+		error: function () {
+			alert("查询用户信息失败");
+		}
+	});
+});
+// 用户信息展示end
