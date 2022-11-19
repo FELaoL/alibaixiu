@@ -34,9 +34,9 @@ app.use(
 
 // 数据库连接
 mongoose
-	.connect("mongodb://alibaixiu:123456@localhost:27017/alibaixiu", { useNewUrlParser: true, useCreateIndex: true })
+	.connect("mongodb://alibaixiu:123456@localhost:27017/alibaixiu", { useNewUrlParser: true })
 	.then(() => console.log("数据库连接成功"))
-	.catch(() => console.log("数据库连接失败"));
+	.catch(err => console.log("数据库连接失败", err));
 
 // 路由
 require("./routes")(app);
