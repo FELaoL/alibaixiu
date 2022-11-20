@@ -21,3 +21,19 @@ function formateDate(date) {
 	date = new Date(date);
 	return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
 }
+// 展示登录用户信息start
+// 向服务器发送请求，索要的登录用户信息
+$.ajax({
+	url: "/users/" + userId,
+	type: "get",
+	success: function (response) {
+		$(".profile .name").html(response.nickName);
+		if (response.avatar) {
+			$(".profile .avatar").attr("src", response.avatar);
+		}
+	},
+	error: function () {
+		alert("获取登录用户信息失败");
+	}
+});
+// 展示登录用户信息end
