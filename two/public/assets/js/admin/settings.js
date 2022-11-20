@@ -16,9 +16,31 @@ $("#logo").on("change", function () {
 		contentType: false,
 		success: function (response) {
 			$("#hiddenLogo").val(response[0].logo);
+			// 将logo图片显示在页面中
+			$("#preview").attr("src", response[0].logo);
 		},
 		error: function () {
 			alert("logo图片上传失败");
 		}
 	});
 });
+// 当网站设置表单发生提交行为时
+$("#settingsForm").on("submit", function () {
+	// 获取到管理员在表单中输入的内容
+	var formData = $(this).serialize();
+	// 向服务器端发送请求，实现网站设置数据添加功能
+	$.ajax({
+		url: "/settings",
+		type: "post",
+		data: formData,
+		success: function () {
+			location.reload();
+		},
+		error: function () {
+			alert("更新网站设置失败");
+		}
+	});
+	// 阻止表单默认提交行为
+	return false;
+});
+// 网站设置end
