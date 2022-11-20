@@ -78,3 +78,24 @@ $("#filterForm").on("submit", function () {
 	// 阻止表单默认提交行为
 	return false;
 });
+// 文章删除start
+// 当删除按钮被点击的时候
+$("#postsBox").on("click", ".delete", function () {
+	// 弹窗确认框和管理员确认是否真的要进行删除操作
+	if (confirm("您真的要进行删除操作吗？")) {
+		// 获取管理员要删除的文章的id
+		var id = $(this).attr("data-id");
+		// 向服务器端发送请求，执行删除操作
+		$.ajax({
+			type: "delete",
+			url: "/posts/" + id,
+			success: function () {
+				location.reload();
+			},
+			error: function () {
+				alert("文章删除失败");
+			}
+		});
+	}
+});
+// 文章删除end
