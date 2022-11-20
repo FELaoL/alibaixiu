@@ -54,3 +54,23 @@ $("#commentsBox").on("click", ".status", function () {
 	});
 });
 // 评论审核end
+// 评论删除start
+// 当删除按钮被点击时
+$("#commentsBox").on("click", ".delete", function () {
+	if (confirm("您真的要执行删除操作吗？")) {
+		// 获取管理员要删除的评论的id
+		var id = $(this).attr("data-id");
+		// 向服务器端发送请求，执行删除操作
+		$.ajax({
+			type: "delete",
+			url: "/comments/" + id,
+			success: function () {
+				location.reload();
+			},
+			error: function () {
+				alert("评论删除失败");
+			}
+		});
+	}
+});
+// 评论删除end
