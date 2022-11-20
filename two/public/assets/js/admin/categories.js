@@ -80,3 +80,24 @@ $("#formBox").on("submit", "#modifyCategory", function () {
 	return false;
 });
 // 分类数据修改end
+
+// 分类数据删除start
+// 当删除按钮被点击的时候
+$("#categoryBox").on("click", ".delete", function () {
+	if (confirm("您真的要执行删除操作吗？")) {
+		// 获取要删除的分类数据id
+		var id = $(this).attr("data-id");
+		// 向服务器端发送请求，删除分类数据
+		$.ajax({
+			type: "delete",
+			url: "/categories/" + id,
+			success: function () {
+				location.reload();
+			},
+			error: function () {
+				alert("分类删除失败");
+			}
+		});
+	}
+});
+// 分类数据删除end
