@@ -107,3 +107,25 @@ $("#modifyBox").on("submit", "#modifyForm", function () {
 	return false;
 });
 // 用户信息修改end
+
+// 删除用户start
+// 当删除按钮被点击的时候
+$("#userBox").on("click", ".delete", function () {
+	// 如果管理员确认要删除用户
+	if (confirm("您真的要删除用户吗？")) {
+		// 获取到即将要删除的用户id
+		var id = $(this).attr("data-id");
+		// 向服务器端发送请求，删除用户
+		$.ajax({
+			type: "delete",
+			url: "/users/" + id,
+			success: function (response) {
+				location.reload();
+			},
+			error: function () {
+				alert("用户删除失败");
+			}
+		});
+	}
+});
+// 删除用户end
