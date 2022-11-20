@@ -22,3 +22,23 @@ $("#file").on("change", function () {
 		}
 	});
 });
+// 当轮播图表单发生提交行为的时候
+$("#slidesForm").on("submit", function () {
+	// 获取管理员在表单中输入的内容
+	const formData = $(this).serialize();
+	// 向服务器端发送请求 添加轮播图数据
+	$.ajax({
+		type: "post",
+		url: "/slides",
+		data: formData,
+		success: function () {
+			location.reload();
+		},
+		error: function () {
+			alert("添加轮播图失败");
+		}
+	});
+	// 阻止表单默认提交行为
+	return false;
+});
+// 图片轮播数据添加end
