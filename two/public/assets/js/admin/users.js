@@ -36,7 +36,7 @@ $("#modifyBox").on("change", "#avatar", function () {
 		success: function (response) {
 			// 实现头像预览功能
 			$("#preview").attr("src", response[0].avatar);
-			$("#hiddenAvatar").val(response[0].avatar);
+			$("#thumbnail").val(response[0].conver);
 		},
 		error: function () {
 			alert("头像上传失败");
