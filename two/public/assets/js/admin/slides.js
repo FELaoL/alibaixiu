@@ -42,3 +42,19 @@ $("#slidesForm").on("submit", function () {
 	return false;
 });
 // 图片轮播数据添加end
+// 轮播图数据展示start
+// 向服务器端发送请求 索要图片轮播列表数据
+$.ajax({
+	type: "get",
+	url: "/slides",
+	success: function (response) {
+		var html = template("slidesTpl", {
+			data: response
+		});
+		$("#slidesBox").html(html);
+	},
+	error: function () {
+		alert("获取轮播图列表失败");
+	}
+});
+// 轮播图数据展示end
