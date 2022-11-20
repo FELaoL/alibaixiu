@@ -21,7 +21,7 @@ $("#userForm").on("submit", function () {
 
 // 用户头像上传start
 // 当用户选择文件的时候
-$("#avatar").on("change", function () {
+$("#modifyBox").on("change", "#avatar", function () {
 	var formdata = new FormData();
 	// 用户选择到的文件
 	formdata.append("avatar", this.files[0]);
