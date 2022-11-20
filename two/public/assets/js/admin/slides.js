@@ -58,3 +58,23 @@ $.ajax({
 	}
 });
 // 轮播图数据展示end
+// 图片轮播数据删除 start
+// 当删除按钮被点击时
+$("#slidesBox").on("click", ".delete", function () {
+	if (confirm("您真的要进行删除操作吗？")) {
+		// 获取管理员要删除的轮播图数据id
+		var id = $(this).attr("data-id");
+		// 向服务器端发送请求，实现轮播图数据删除功能
+		$.ajax({
+			type: "delete",
+			url: "/slides/" + id,
+			success: function () {
+				location.reload();
+			},
+			error: function () {
+				alert("轮播图数据删除失败");
+			}
+		});
+	}
+});
+// 图片轮播数据删除end
