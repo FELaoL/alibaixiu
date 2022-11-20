@@ -39,3 +39,44 @@ $.ajax({
 	}
 });
 // 分类数据展示end
+
+// 分类数据修改start
+// 为编辑按钮添加点击事件
+$("#categoryBox").on("click", ".edit", function () {
+	// 获取要修改的分类数据的id
+	var id = $(this).attr("data-id");
+	// 根据id获取分类数据的详细信息
+	$.ajax({
+		type: "get",
+		url: "/categories/" + id,
+		success: function (response) {
+			var html = template("modifyCategoryTpl", response);
+			$("#formBox").html(html);
+		},
+		error: function () {
+			alert("获取分类信息失败");
+		}
+	});
+});
+// 当修改分类数据表单发生提交行为的时候
+$("#formBox").on("submit", "#modifyCategory", function () {
+	// 获取管理员在表单中输入的内容
+	var formData = $(this).serialize();
+	// 获取要修改的分类的id
+	var id = $(this).attr("data-id");
+	// 发送请求，修改分类数据
+	$.ajax({
+		type: "put",
+		url: "/categories/" + id,
+		data: formData,
+		success: function () {
+			location.reload();
+		},
+		error: function () {
+			alert("修改分类失败");
+		}
+	});
+	// 阻止表单的默认提交行为
+	return false;
+});
+// 分类数据修改end
