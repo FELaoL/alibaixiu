@@ -44,3 +44,28 @@ $("#settingsForm").on("submit", function () {
 	return false;
 });
 // 网站设置end
+// 显示网站设置数据start
+// 向服务器端发送请求，索要网站设置数据
+$.ajax({
+	type: "get",
+	url: "/settings",
+	success: function (response) {
+		if (response) {
+			// 将logo地址存储在隐藏域中
+			$("#preview").attr("src", response.logo);
+			// 将logo显示在页面中
+			$("#hiddenLogo").val(response.logo);
+			// 将网站标题显示在页面中
+			$('input[name="title"]').val(response.title);
+			// 将是否开启评论功能显示在页面中
+			$('input[name="comment"]').prop("checked", response.comment);
+			// 将评论是否经过人工审核显示在页面中
+			$('input[name="review"]').prop("checked", response.review);
+		}
+	},
+	error: function () {
+		alert("获取网站设置失败");
+	}
+});
+// 2. 判断服务器端返回的数据是否为真，如果为真，将数据展示在表单中
+// 显示网站设置数据 end
