@@ -20,3 +20,22 @@ $("#addCategory").on("submit", function () {
 	return false;
 });
 // 添加分类end
+
+// 分类数据展示start
+// 发送ajax请求，向服务器端索要分类列表数据
+$.ajax({
+	type: "GET",
+	url: "/categories",
+	success: function (response) {
+		// 将服务器端返回的数据和HTML模板进行拼接
+		var html = template("categoryListTpl", {
+			data: response
+		});
+		// 将拼接好的内容放到页面中
+		$("#categoryBox").html(html);
+	},
+	error: function () {
+		alert("获取分类列表失败");
+	}
+});
+// 分类数据展示end
