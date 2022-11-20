@@ -83,3 +83,27 @@ $("#userBox").on("click", ".edit", function () {
 	});
 });
 // 用户信息展示end
+
+// 用户信息修改start
+$("#modifyBox").on("submit", "#modifyForm", function () {
+	// 获取用户在表单中输入的内容
+	var formData = $(this).serialize();
+	// 获取要修改的那个用户的id值
+	var id = $(this).attr("data-id");
+	// 发送请求，修改用户信息
+	$.ajax({
+		type: "put",
+		url: "/users/" + id,
+		data: formData,
+		success: function (response) {
+			// 修改用户信息成功，重新加载页面
+			location.reload();
+		},
+		error: function () {
+			alert("用户更新失败");
+		}
+	});
+	// 阻止表单默认提交行为
+	return false;
+});
+// 用户信息修改end
