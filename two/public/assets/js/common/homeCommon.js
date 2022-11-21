@@ -89,3 +89,24 @@ $.ajax({
 	}
 });
 // 最新评论end
+
+// 菜单start
+// 向服务器端发送请求，索要文章分类列表数据
+$.ajax({
+	url: "/categories",
+	type: "GET",
+	success: function (response) {
+		var navTpl = `
+    {{each data}}
+    <li><a href="/list.html?category={{$value._id}}"><i class="fa {{$value.className}}"></i>{{$value.title}}</a></li>
+    {{/each}}
+    `;
+		var html = template.render(navTpl, { data: response });
+		$("#topNavBox").html(html);
+		$("#navBox").html(html);
+	},
+	error: function () {
+		alert("获取分类数据失败");
+	}
+});
+// 菜单end
