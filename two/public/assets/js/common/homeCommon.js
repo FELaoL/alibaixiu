@@ -3,6 +3,7 @@ $.ajax({
 	type: "get",
 	url: "/posts/recommend",
 	success: function (response) {
+		// 为了讲模板变成公共的，所以将模板写在了js文件中
 		var recommendTpl = `
         {{each data}}
         <li>
@@ -14,6 +15,7 @@ $.ajax({
         {{/each}}
         `;
 		var html = template.render(recommendTpl, { data: response });
+		// 将拼接好的热门推荐数据显示在了页面中
 		$("#recomendBox").html(html);
 	}
 });

@@ -38,3 +38,18 @@ $.ajax({
 	}
 });
 // 轮播图数据展示end
+// 最新发布start
+$.ajax({
+	type: "get",
+	url: "/posts/lasted",
+	success: function (response) {
+		var html = template("lastedTpl", {
+			datas: response
+		});
+		$("#lastedBox").html(html);
+	},
+	error: function () {
+		alert("获取最新发布的文章失败");
+	}
+});
+// 最新发布end
