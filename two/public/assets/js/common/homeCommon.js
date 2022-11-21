@@ -98,7 +98,7 @@ $.ajax({
 	success: function (response) {
 		var navTpl = `
     {{each data}}
-    <li><a href="/list.html?category={{$value._id}}"><i class="fa {{$value.className}}"></i>{{$value.title}}</a></li>
+    <li><a href="/list.html?categoryId={{$value._id}}"><i class="fa {{$value.className}}"></i>{{$value.title}}</a></li>
     {{/each}}
     `;
 		var html = template.render(navTpl, { data: response });
