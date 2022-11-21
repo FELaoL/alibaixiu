@@ -122,3 +122,21 @@ $.ajax({
 	}
 });
 // 菜单end
+// 点赞start
+// 当点赞按钮发生点击事件时
+$("#listBox").on("click", "#like", function () {
+	const id = $(this).attr("data-id");
+	// 向服务器端发送请求，执行点赞操作
+	$.ajax({
+		url: "/posts/fabulous/" + id,
+		type: "post",
+		success: function () {
+			alert("点赞成功，感谢您的支持！");
+			location.reload();
+		},
+		error: function () {
+			alert("点赞失败");
+		}
+	});
+});
+// 点赞end
