@@ -23,8 +23,15 @@ $("#loginBtn").on("click", function () {
 			password
 		},
 		success: function (response) {
+			// 对用户的角色进行判断
+			// 如果是管理员就跳转到数据管理的首页面
+			// 如果是普通用户，就跳转到网站的首页面
 			// 登录成功，跳转到数据管理的首页面
-			location.href = "/admin/index.html";
+			if (response.role === "admin") {
+				location.href = "/admin/index.html";
+			} else {
+				location.href = "/index.html";
+			}
 		},
 		error: function () {
 			// 登录失败

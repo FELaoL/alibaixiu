@@ -140,3 +140,15 @@ $("#listBox").on("click", "#like", function () {
 	});
 });
 // 点赞end
+
+// 搜索start
+// 获取到搜索表单，并为其添加表单提交事件
+$(".search form").on("submit", function () {
+	// 获取到用户在表单中输入的搜索关键字
+	var keys = $(this).find(".keys").val();
+	// 跳转到搜索结果页面，并且将用户输入的搜索关键字传递到搜索结果页面
+	location.href = "/list.html?key=" + keys;
+	// 阻止表单默认提交行为
+	return false;
+});
+// 搜索end
