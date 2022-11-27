@@ -1,4 +1,4 @@
-// 登录功能start
+// ----------------登录功能---------------------------
 // 选择登录按钮并为其添加点击事件
 $("#loginBtn").on("click", function () {
 	// 获取用户输入的邮箱地址
@@ -26,8 +26,8 @@ $("#loginBtn").on("click", function () {
 			// 对用户的角色进行判断
 			// 如果是管理员就跳转到数据管理的首页面
 			// 如果是普通用户，就跳转到网站的首页面
-			// 登录成功，跳转到数据管理的首页面
 			if (response.role === "admin") {
+				// 登录成功，跳转到数据管理的首页面
 				location.href = "/admin/index.html";
 			} else {
 				location.href = "/index.html";
@@ -40,4 +40,4 @@ $("#loginBtn").on("click", function () {
 	});
 	return false;
 });
-// 登录功能end
+// ----------------------------------------------------

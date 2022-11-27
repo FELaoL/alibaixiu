@@ -6,7 +6,6 @@ const { Category, validateCategory } = require("../../../model/Category");
 module.exports = async (req, res) => {
 	// 待修改用户id
 	req.fields._id = req.params["id"];
-	console.log();
 	// 定义对象验证规则
 	const schema = Joi.object({
 		_id: Joi.string()

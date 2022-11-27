@@ -1,4 +1,19 @@
-// 图片轮播数据添加start
+// -----------------轮播图数据展示---------------------------------
+// 向服务器端发送请求 索要图片轮播列表数据
+$.ajax({
+	type: "get",
+	url: "/slides",
+	success: function (response) {
+		var html = template("slidesTpl", {
+			data: response
+		});
+		$("#slidesBox").html(html);
+	},
+	error: function () {
+		alert("获取轮播图列表失败");
+	}
+});
+// ----------------图片轮播数据文件上传---------------------------
 // 当管理员选择文件的时候
 $("#file").on("change", function () {
 	// 用户选择到的文件
@@ -16,12 +31,14 @@ $("#file").on("change", function () {
 		contentType: false,
 		success: function (response) {
 			$("#image").val(response[0].image);
+			$(".thumbnail").attr("src", response[0].image).show();
 		},
 		error: function () {
 			alert("轮播图图片上传失败");
 		}
 	});
 });
+// -----------------------图片轮播数据添加----------------------------------
 // 当轮播图表单发生提交行为的时候
 $("#slidesForm").on("submit", function () {
 	// 获取管理员在表单中输入的内容
@@ -41,24 +58,7 @@ $("#slidesForm").on("submit", function () {
 	// 阻止表单默认提交行为
 	return false;
 });
-// 图片轮播数据添加end
-// 轮播图数据展示start
-// 向服务器端发送请求 索要图片轮播列表数据
-$.ajax({
-	type: "get",
-	url: "/slides",
-	success: function (response) {
-		var html = template("slidesTpl", {
-			data: response
-		});
-		$("#slidesBox").html(html);
-	},
-	error: function () {
-		alert("获取轮播图列表失败");
-	}
-});
-// 轮播图数据展示end
-// 图片轮播数据删除 start
+// -------------------------图片轮播数据删除-------------------------------
 // 当删除按钮被点击时
 $("#slidesBox").on("click", ".delete", function () {
 	if (confirm("您真的要进行删除操作吗？")) {
@@ -77,4 +77,4 @@ $("#slidesBox").on("click", ".delete", function () {
 		});
 	}
 });
-// 图片轮播数据删除end
+// ----------------------------------------------------------------

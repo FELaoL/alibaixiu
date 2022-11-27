@@ -1,51 +1,4 @@
-// 添加用户start
-$("#userForm").on("submit", function () {
-	// 获取到用户在表单中输入的内容并将内容格式化成参数字符串
-	var formData = $(this).serialize();
-	// 向服务器端发送添加用户的请求
-	$.ajax({
-		type: "post",
-		url: "/users",
-		data: formData,
-		success: function () {
-			location.reload();
-		},
-		error: function () {
-			alert("用户添加失败");
-		}
-	});
-	// 阻止表单默认提交行为
-	return false;
-});
-// 添加用户end
-
-// 用户头像上传start
-// 当用户选择文件的时候
-$("#modifyBox").on("change", "#avatar", function () {
-	var formdata = new FormData();
-	// 用户选择到的文件
-	formdata.append("avatar", this.files[0]);
-	$.ajax({
-		type: "post",
-		url: "/upload",
-		data: formdata,
-		// 告诉$.ajax方法不要解析请求参数
-		processData: false,
-		// 告诉$.ajax方法不要设置请求参数类型
-		contentType: false,
-		success: function (response) {
-			// 实现头像预览功能
-			$("#preview").attr("src", response[0].avatar);
-			$("#thumbnail").val(response[0].conver);
-		},
-		error: function () {
-			alert("头像上传失败");
-		}
-	});
-});
-// 用户头像上传end
-
-// 展示用户列表start
+// -------------------展示用户列表-------------------------------
 // 向服务器端发送请求，索要用户列表数据
 $.ajax({
 	type: "get",
@@ -62,9 +15,52 @@ $.ajax({
 		alert("获取用户列表失败");
 	}
 });
-// 展示用户列表end
-
-// 用户信息展示start
+// ------------------用户头像上传----------------------------------
+// 当用户选择文件的时候
+$("#modifyBox").on("change", "#avatar", function () {
+	var formdata = new FormData();
+	// 用户选择到的文件
+	formdata.append("avatar", this.files[0]);
+	$.ajax({
+		type: "post",
+		url: "/upload",
+		data: formdata,
+		// 告诉$.ajax方法不要解析请求参数
+		processData: false,
+		// 告诉$.ajax方法不要设置请求参数类型
+		contentType: false,
+		success: function (response) {
+			// 实现头像预览功能
+			$("#preview").attr("src", response[0].avatar);
+			$("#hiddenAvatar").val(response[0].avatar);
+		},
+		error: function () {
+			alert("头像上传失败");
+		}
+	});
+});
+// ------------------------添加用户--------------------------------------
+// 当表单发生提交行为的时候
+$("#userForm").on("submit", function () {
+	// 获取到用户在表单中输入的内容并将内容格式化成参数字符串
+	var formData = $(this).serialize();
+	// 向服务器端发送添加用户的请求
+	$.ajax({
+		type: "post",
+		url: "/users",
+		data: formData,
+		success: function () {
+			// 刷新页面
+			location.reload();
+		},
+		error: function () {
+			alert("用户添加失败");
+		}
+	});
+	// 阻止表单默认提交行为
+	return false;
+});
+// -------------------编辑用户信息展示-----------------------------------------
 // 通过事件委托的方式为编辑按钮添加点击事件
 $("#userBox").on("click", ".edit", function () {
 	// 获取被点击用户的id的值
@@ -82,9 +78,8 @@ $("#userBox").on("click", ".edit", function () {
 		}
 	});
 });
-// 用户信息展示end
-
-// 用户信息修改start
+// --------------------------用户信息修改---------------------------------------
+// 为修改表单添加表单提交事件
 $("#modifyBox").on("submit", "#modifyForm", function () {
 	// 获取用户在表单中输入的内容
 	var formData = $(this).serialize();
@@ -106,9 +101,7 @@ $("#modifyBox").on("submit", "#modifyForm", function () {
 	// 阻止表单默认提交行为
 	return false;
 });
-// 用户信息修改end
-
-// 删除用户start
+// ----------------------------单个删除用户-----------------------------------------
 // 当删除按钮被点击的时候
 $("#userBox").on("click", ".delete", function () {
 	// 如果管理员确认要删除用户
@@ -128,14 +121,12 @@ $("#userBox").on("click", ".delete", function () {
 		});
 	}
 });
-// 删除用户end
-
-// 批量删除用户start
+// ----------------------删除用户选择框联动-----------------------------------------------
 // 获取全选按钮
 var selectAll = $("#selectAll");
 // 获取批量删除按钮
 var deleteMany = $("#deleteMany");
-// 当全选按钮
+// 当全选按钮的状态发生变化时
 selectAll.on("change", function () {
 	// 获取到全选按钮当前的状态
 	var status = $(this).prop("checked");
@@ -171,6 +162,7 @@ $("#userBox").on("change", ".userStatus", function () {
 		deleteMany.hide();
 	}
 });
+// -------------------------批量删除按钮操作------------------------------------
 // 为批量删除按钮添加点击事件
 deleteMany.on("click", function () {
 	var ids = [];
@@ -180,7 +172,7 @@ deleteMany.on("click", function () {
 	checkedUser.each(function (index, element) {
 		ids.push($(element).attr("data-id"));
 	});
-	if (confirm("您真的确定要进行批量删除操作吗？")) {
+	if (confirm("您真要确定要进行批量删除操作吗？")) {
 		$.ajax({
 			type: "delete",
 			url: "/users/" + ids.join("-"),
@@ -193,4 +185,4 @@ deleteMany.on("click", function () {
 		});
 	}
 });
-// 批量删除用户end
+// --------------------------------------------------------------------------

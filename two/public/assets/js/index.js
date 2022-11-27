@@ -1,4 +1,4 @@
-// 轮播图数据展示start
+// -----------------------------------轮播图数据展示--------------------------------------------------------
 // 向服务器端发送请求， 索要轮播图数据
 $.ajax({
 	type: "get",
@@ -12,20 +12,16 @@ $.ajax({
 			datas: response
 		});
 		$(".cursor").html(htmlC);
-
 		var swiper = Swipe(document.querySelector(".swipe"), {
 			auto: 3000,
 			transitionEnd: function (index) {
 				// index++;
-
 				$(".cursor span").eq(index).addClass("active").siblings(".active").removeClass("active");
 			}
 		});
-
 		// 上/下一张
 		$(".swipe .arrow").on("click", function () {
 			var _this = $(this);
-
 			if (_this.is(".prev")) {
 				swiper.prev();
 			} else if (_this.is(".next")) {
@@ -37,14 +33,14 @@ $.ajax({
 		alert("获取轮播图列表失败");
 	}
 });
-// 轮播图数据展示end
-// 最新发布start
+// ---------------------------------最新发布文章展示------------------------------------------------------------
+// 向服务器端发送请求，索要最新发布数据
 $.ajax({
 	type: "get",
 	url: "/posts/lasted",
 	success: function (response) {
 		var html = template("lastedTpl", {
-			datas: response
+			data: response
 		});
 		$("#lastedBox").html(html);
 	},
@@ -52,4 +48,4 @@ $.ajax({
 		alert("获取最新发布的文章失败");
 	}
 });
-// 最新发布end
+// -------------------------------------------------------------------------

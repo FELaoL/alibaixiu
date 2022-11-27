@@ -1,6 +1,5 @@
 <!-- 登录拦截start -->
 <script src="/login/status"></script>
-
 <script>
 	if (!isLogin) location.href = "login.html";
 </script>
@@ -20,7 +19,6 @@
 		<script>
 			NProgress.start();
 		</script>
-
 		<div class="main">
 			<nav class="navbar">
 				<button class="btn btn-default navbar-btn fa fa-bars"></button>
@@ -29,7 +27,7 @@
 						<a href="password-reset.html"><i class="fa fa-user"></i>修改密码</a>
 					</li>
 					<li>
-						<a href="login.html"><i class="fa fa-sign-out"></i>退出</a>
+						<a href="javascript:;" id="logout"><i class="fa fa-sign-out"></i>退出</a>
 					</li>
 				</ul>
 			</nav>
@@ -81,7 +79,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="aside">
 			<div class="profile">
 				<img class="avatar" src="../uploads/avatar.jpg" />
@@ -114,9 +111,13 @@
 				</li>
 			</ul>
 		</div>
-
+		<script>
+			NProgress.done();
+		</script>
 		<script src="../assets/vendors/jquery/jquery.js"></script>
 		<script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
+		<script src="../assets/js/common/adminCommon.js"></script>
+		<script src="../assets/js/admin/slides.js"></script>
 		<script src="../assets/vendors/art-template/template-web.js"></script>
 		<!-- 轮播图列表模板 -->
 		<script type="text/html" id="slidesTpl">
@@ -130,10 +131,6 @@
 				</td>
 			</tr>
 			{{/each}}
-		</script>
-		<script src="../assets/js/admin/slides.js"></script>
-		<script>
-			NProgress.done();
 		</script>
 	</body>
 </html>

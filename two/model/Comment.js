@@ -47,14 +47,14 @@ const validateComment = comment => {
 	// _id验证规则
 	const objectIdReg = /^[0-9a-fA-F]{24}$/;
 	// 定义对象验证规则
-	const schema = {
+	const schema = Joi.object({
 		author: Joi.string().regex(objectIdReg).required().error(new Error("用户ID非法")),
 		content: Joi.string().min(4).required().error(new Error("评论不符合格式要求")),
 		post: Joi.string().regex(objectIdReg).required().error(new Error("评论文章ID非法")),
 		state: Joi.number().valid(0, 1)
-	};
+	});
 	// 验证
-	return Joi.validate(comment, schema, {
+	return schema.validate(comment, {
 		// 检测到所有错误
 		abortEarly: false,
 		// 允许对象包含被忽略的未知键
