@@ -1,4 +1,4 @@
-const { Slide } = require('../../../model/Slide');
+const { Slide } = require("../../../model/Slide");
 
 module.exports = async (req, res) => {
 	// 查找

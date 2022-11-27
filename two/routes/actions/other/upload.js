@@ -6,11 +6,11 @@ module.exports = async (req, res) => {
 		// 循环结果对象
 		for (let attr in req.files) {
 			// 如果结果对象中存在path属性
-			if(req.files[attr].path) {
+			if (req.files[attr].path) {
 				// 将值存储到结果数组中
 				imgsPath.push({
-					[attr]: req.files[attr].path.split('public')[1]
-				})
+					[attr]: req.files[attr].path.split("public")[1]
+				});
 			}
 		}
 	}

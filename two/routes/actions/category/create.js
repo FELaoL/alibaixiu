@@ -20,9 +20,5 @@ module.exports = async (req, res) => {
 		await category.save();
 		// 响应
 		res.send(category);
-	} catch (error) {
-		console.log("=====================");
-		console.log(error);
-		console.log("=====================");
-	}
+	} catch (error) {}
 };
